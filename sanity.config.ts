@@ -1,7 +1,6 @@
 /**
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
-
 import { visionTool } from '@sanity/vision'
 import { createConfig, Slug } from 'sanity'
 import { deskTool } from 'sanity/desk'
@@ -9,7 +8,16 @@ import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
 import { PostsPreview } from './components/Posts/PostsPreview'
 import authorType from './schemas/author'
-import postType from './schemas/post'
+import accordion from './schemas/objects/accordion'
+import accordions from './schemas/objects/accordions'
+import animatedDivider from './schemas/objects/animatedDivider'
+import complexPortableText from './schemas/objects/complexPortableText'
+import navigationSection from './schemas/objects/navigationSection'
+import navLink from './schemas/objects/navLink'
+import navPage from './schemas/objects/navPage'
+import seoType from './schemas/objects/seo'
+import simplePortableText from './schemas/objects/simplePortableText'
+import postType from './schemas/page'
 import settingsType from './schemas/settings'
 
 // @TODO: update next-sanity/studio to automatically set this when needed
@@ -24,7 +32,20 @@ export default createConfig({
     'Next.js Blog with Sanity.io',
   schema: {
     // If you want more content types, you can add them to this array
-    types: [settingsType, postType, authorType],
+    types: [
+      settingsType,
+      postType,
+      authorType,
+      seoType,
+      simplePortableText,
+      complexPortableText,
+      accordions,
+      accordion,
+      animatedDivider,
+      navLink,
+      navPage,
+      navigationSection,
+    ],
   },
   plugins: [
     deskTool({
