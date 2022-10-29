@@ -12,6 +12,7 @@ import accordion from './schemas/objects/accordion'
 import accordions from './schemas/objects/accordions'
 import animatedDivider from './schemas/objects/animatedDivider'
 import complexPortableText from './schemas/objects/complexPortableText'
+import horizontalRule from './schemas/objects/horizontalRule'
 import navigationSection from './schemas/objects/navigationSection'
 import navLink from './schemas/objects/navLink'
 import navPage from './schemas/objects/navPage'
@@ -19,7 +20,6 @@ import seoType from './schemas/objects/seo'
 import simplePortableText from './schemas/objects/simplePortableText'
 import postType from './schemas/page'
 import settingsType from './schemas/settings'
-
 // @TODO: update next-sanity/studio to automatically set this when needed
 const basePath = '/studio'
 
@@ -45,6 +45,7 @@ export default createConfig({
       navLink,
       navPage,
       navigationSection,
+      horizontalRule,
     ],
   },
   plugins: [
