@@ -1,0 +1,8 @@
+.root {
+  @apply py-16;
+}
+.content {
+  @apply flex justify-between relative items-center;
+}
+.title {
+}

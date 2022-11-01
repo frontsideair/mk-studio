@@ -29,7 +29,7 @@ export default createConfig({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   title:
     process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
-    'Next.js Blog with Sanity.io',
+    'Monkey Kode - Let the monkey code for you',
   schema: {
     // If you want more content types, you can add them to this array
     types: [

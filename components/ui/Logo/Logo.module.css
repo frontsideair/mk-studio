@@ -1,0 +1,9 @@
+.root {
+  @apply font-bold text-3xl tracking-tight uppercase p-6;
+}
+.root span:first-of-type {
+  @apply text-white;
+}
+.root span:last-of-type {
+  @apply text-primary;
+}

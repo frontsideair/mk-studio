@@ -1,0 +1,23 @@
+.root {
+  @apply cursor-pointer origin-center;
+}
+.path {
+  @apply fill-primary;
+}
+
+.circle {
+  @apply stroke-white;
+}
+
+.right {
+  @apply -rotate-90;
+}
+.left {
+  @apply rotate-90;
+}
+.down {
+  @apply rotate-0;
+}
+.up {
+  @apply rotate-180;
+}

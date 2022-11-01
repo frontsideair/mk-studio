@@ -4,5 +4,7 @@
     "titleBar.inactiveForeground": "#ffffffcc",
     "titleBar.activeBackground": "#2B2272",
     "titleBar.inactiveBackground": "#2B2272"
-  }
+  },
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

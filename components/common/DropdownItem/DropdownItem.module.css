@@ -1,0 +1,56 @@
+.root {
+  @apply relative ml-3;
+}
+
+.mobileButton {
+  @apply flex text-sm focus:outline-none uppercase py-3;
+}
+
+.mobileButton[aria-expanded='true'] {
+  @apply text-tertiary border-b border-primary;
+}
+.srOnly {
+  @apply sr-only;
+}
+
+.menuItems {
+  @apply absolute lg:-left-[60%] z-10 mt-2 w-48 py-1 ring-1 ring-black ring-opacity-5 focus:outline-none text-white bg-black;
+}
+
+.menuItem {
+  @apply block px-4 py-3 text-sm uppercase text-left lg:text-center text-white;
+}
+.menuItemActive {
+  @apply bg-black text-primary;
+}
+
+.menuLink {
+  @apply px-3 py-2 uppercase  font-medium;
+}
+.menuLinkActive {
+  @apply text-white;
+}
+
+.menuLinkInactive {
+  @apply bg-black text-white hover:text-primary;
+}
+
+.transitionEnter {
+  @apply transition ease-out duration-100;
+}
+.transitionEnterFrom {
+  @apply transform opacity-0 scale-95;
+}
+.transitionEnterTo {
+  @apply transform opacity-100 scale-100;
+}
+.transitionLeave {
+  @apply transition ease-in duration-75;
+}
+.transitionLeaveFrom {
+  @apply transform opacity-100 scale-100;
+}
+
+.transitionLeaveTo {
+  @apply transform opacity-0 scale-95;
+}

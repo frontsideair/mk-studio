@@ -18,9 +18,17 @@
     "paths": {
       "@components/*": ["components/*"],
       "@lib/*": ["lib/*"],
-      "@images": ["images/*"]
-    }
+      "@images/*": ["images/*"],
+      "@app/*": ["app/*"],
+      "@pages/*": ["pages/*"],
+      "@framework/*": ["framework/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

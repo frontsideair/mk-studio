@@ -1,0 +1,48 @@
+.root {
+  @apply w-full relative z-50;
+}
+.wrap {
+  @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+}
+.innerWrap {
+  @apply relative flex h-16 items-center justify-between;
+}
+.mobileWrap {
+  @apply absolute inset-y-0 left-0 flex items-center sm:hidden;
+}
+
+.mobileButton {
+  @apply inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white;
+}
+
+.srOnly {
+  @apply sr-only;
+}
+
+.mobileIcon {
+  @apply block h-6 w-6;
+}
+
+.menuBar {
+  @apply flex flex-1 items-center lg:justify-between sm:items-stretch justify-start w-full lg:w-auto;
+}
+
+.logoWrap {
+  @apply flex flex-shrink-0 items-center w-full lg:w-auto;
+}
+.logo {
+  @apply text-center lg:text-left w-full;
+}
+.dropdownWrap {
+  @apply hidden sm:ml-6 sm:block;
+}
+.dropdownInnerWrap {
+  @apply flex space-x-4 items-center h-full;
+}
+.mobileMenu {
+  @apply sm:hidden;
+}
+
+.mobileMenuInnerWrap {
+  @apply flex flex-col lg:block space-y-1 px-2 pt-2 pb-3;
+}
