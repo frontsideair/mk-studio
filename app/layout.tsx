@@ -1,22 +1,23 @@
-import { ApolloProvider } from '@apollo/client'
+import '@styles/globals.css'
+
 import Footer from '@components/common/Footer'
 import Header from '@components/common/Header'
-import { useApollo } from 'framework/client'
+import { Red_Hat_Display } from '@next/font/google'
 import { ReactNode } from 'react'
 
+const RedHatDisplay = Red_Hat_Display()
 const RootLayout = ({ children }: { children: ReactNode }) => {
-  const apolloClient = useApollo({})
-
   return (
-    <html lang="en">
+    <html lang="en" className={RedHatDisplay.className}>
       <head>
         <title>Monkey Kode - Let the Monkey code for you.</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      {/* <ApolloProvider client={apolloClient}> */}
-      <body>{children}</body>
-      <Footer />
-      {/* </ApolloProvider> */}
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

@@ -1,4 +1,4 @@
-import HR from '@components/HR'
+// import HR from '@components/HR'
 import { UnderlineIcon } from '@sanity/icons'
 import { defineType } from 'sanity'
 
@@ -6,13 +6,14 @@ export default defineType({
   name: 'horizontalRule',
   title: 'Horizontal Rule',
   type: 'object',
+  icon: UnderlineIcon,
   fields: [
     {
       type: 'string',
       name: 'horizontalRule',
-      components: {
-        input: HR,
-      },
+      //   components: {
+      //     input: HR,
+      //   },
     },
   ],
   preview: {

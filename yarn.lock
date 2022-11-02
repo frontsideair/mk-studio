@@ -627,6 +627,11 @@
   dependencies:
     glob "7.1.7"
 
+"@next/font@^13.0.1":
+  version "13.0.1"
+  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.0.1.tgz#def5401c7f031e8b87c31ad08907154b669df187"
+  integrity sha512-ktst4FFbEPtD8SJVQr2HuAqOoFpJx3xKkLOHzCV7D5PUk6KL/sFQa+t6UEucN70X037tqBV39BsFhMJ56hsPOw==
+
 "@next/swc-android-arm-eabi@13.0.1":
   version "13.0.1"
   resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-13.0.1.tgz#7ce2a7b6576845bc6d7f55504bf9b82a0d9a2792"
@@ -786,6 +791,17 @@
   version "3.0.0-dev-preview.22"
   resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-3.0.0-dev-preview.22.tgz#da989b433fdf1b3707c4ee6602e90cccc600e072"
   integrity sha512-XkYlEyzvcX+ZSiURthD06cAVVrZDnF6DSLZ2P7ZWzlfswTBZp8/znPNl1pONzv1C7D6if+C2BPLWBj54Gdgx/Q==
+  dependencies:
+    "@babel/traverse" "^7.19.0"
+    esbuild "^0.14.43"
+    esbuild-register "^3.3.2"
+    get-it "^5.2.1"
+    pkg-dir "^5.0.0"
+
+"@sanity/cli@^3.0.0-rc.0":
+  version "3.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-3.0.0-rc.0.tgz#f411fbf1eeb359351f7d40bfe4c295de1a8a723b"
+  integrity sha512-sfTRQQ+0ELms4pi3tTjRR85e0KOpD9bZsNzWf5EaGS3pPFvwsqI40CqmeDq+7izYmYisvj47jL9j0uNis0OUug==
   dependencies:
     "@babel/traverse" "^7.19.0"
     esbuild "^0.14.43"

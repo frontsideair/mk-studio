@@ -8,6 +8,7 @@ import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
 import { PostsPreview } from './components/Posts/PostsPreview'
 import authorType from './schemas/author'
+import menuType from './schemas/documents/menu'
 import accordion from './schemas/objects/accordion'
 import accordions from './schemas/objects/accordions'
 import animatedDivider from './schemas/objects/animatedDivider'
@@ -25,20 +26,19 @@ const basePath = '/studio'
 
 export default createConfig({
   basePath,
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-  title:
-    process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
-    'Monkey Kode - Let the monkey code for you',
+  projectId: 'sgrnoblg',
+  dataset: 'production',
+  title: 'Monkey Kode - Let the monkey code for you',
   schema: {
     // If you want more content types, you can add them to this array
     types: [
       settingsType,
+      menuType,
       postType,
       authorType,
       seoType,
       simplePortableText,
-      complexPortableText,
+      // complexPortableText,
       accordions,
       accordion,
       animatedDivider,
@@ -65,7 +65,9 @@ export default createConfig({
 
         // The default root list items (except custom ones)
         const defaultListItems = S.documentTypeListItems().filter(
-          (listItem) => listItem.getId() !== settingsType.name
+          (listItem) => {
+            return listItem.getId() !== settingsType.name
+          }
         )
 
         return S.list()

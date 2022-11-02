@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { IndexQuery_menu_items } from 'types/IndexQuery';
+
 import DropdownItem from '../DropdownItem';
 
 interface DropDownProps {

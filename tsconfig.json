@@ -21,7 +21,8 @@
       "@images/*": ["images/*"],
       "@app/*": ["app/*"],
       "@pages/*": ["pages/*"],
-      "@framework/*": ["framework/*"]
+      "@framework/*": ["framework/*"],
+      "@styles/*": ["styles/*"]
     },
     "plugins": [
       {

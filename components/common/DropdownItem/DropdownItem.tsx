@@ -1,10 +1,13 @@
-import { Menu, Transition } from '@headlessui/react';
-import { FC, Fragment } from 'react';
-import { IndexQuery_menu_items } from 'types/IndexQuery';
-import cn from 'classnames';
-import s from './DropdownItem.module.css';
+import { Menu, Transition } from '@headlessui/react'
+import cn from 'classnames'
+import Link from 'next/link'
+import { FC, Fragment } from 'react'
+import { IndexQuery_menu_items } from 'types/IndexQuery'
+
+import s from './DropdownItem.module.css'
+
 interface DropDownItemProps {
-  item: IndexQuery_menu_items;
+  item: IndexQuery_menu_items
 }
 const DropdownItem: FC<DropDownItemProps> = ({ item }) => {
   return item?.links?.length ? (
@@ -29,12 +32,12 @@ const DropdownItem: FC<DropDownItemProps> = ({ item }) => {
             link ? (
               <Menu.Item key={`${link.target?.slug}_${i}` ?? i}>
                 {({ active }) => (
-                  <a
+                  <Link
                     href={`/${link.target?.slug?.current}`}
                     className={cn(active ? s.menuItemActive : '', s.menuItem)}
                   >
                     {link.target?.title}
-                  </a>
+                  </Link>
                 )}
               </Menu.Item>
             ) : null
@@ -43,7 +46,7 @@ const DropdownItem: FC<DropDownItemProps> = ({ item }) => {
       </Transition>
     </Menu>
   ) : (
-    <a
+    <Link
       href={`/${item?.target?.slug?.current}`}
       className={cn(
         item?.target?.slug?.current ? s.menuLinkActive : s.menuLinkActive,
@@ -52,7 +55,7 @@ const DropdownItem: FC<DropDownItemProps> = ({ item }) => {
       aria-current={item?.target?.slug?.current ? 'page' : undefined}
     >
       {item?.title}
-    </a>
-  );
-};
-export default DropdownItem;
+    </Link>
+  )
+}
+export default DropdownItem

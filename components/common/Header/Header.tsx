@@ -1,15 +1,23 @@
 // import { IndexQuery_menu } from 'types/IndexQuery';
 
-import Logo from '../../ui/Logo'
+import { initializeApollo } from '@framework/client'
+import MENU_QUERY from '@framework/data/queries/menuQuery'
+
 import Nav from '../Nav/Nav'
 import s from './Header.module.css'
-interface HeaderProps {
-  menu: any[]
+
+const getNavItems = async () => {
+  const apolloClient = initializeApollo()
+  const { data } = await apolloClient.query({
+    query: MENU_QUERY,
+  })
+  return data?.menu
 }
-const Header = ({ menu }: HeaderProps) => {
+const Header = async () => {
+  const menu = await getNavItems()
   return (
     <header className={s.root}>
-      <Nav menu={menu} />
+     {}  <Nav menu={menu} />
     </header>
   )
 }

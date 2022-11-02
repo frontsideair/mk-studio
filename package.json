@@ -7,7 +7,9 @@
     "lint": "next lint -- --ignore-path .gitignore",
     "lint:fix": "npm run format && npm run lint -- --fix",
     "start": "next start",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "sanity:deploy": "sanity deploy",
+    "sanity:graphql:deploy": "sanity graphql deploy"
   },
   "prettier": {
     "semi": false,
@@ -17,7 +19,9 @@
     "@apollo/client": "^3.7.1",
     "@headlessui/react": "^1.7.3",
     "@heroicons/react": "^2.0.12",
+    "@next/font": "^13.0.1",
     "@portabletext/react": "^1.0.6",
+    "@sanity/cli": "^3.0.0-rc.0",
     "@sanity/image-url": "^1.0.1",
     "@sanity/vision": "3.0.0-dev-preview.22",
     "@sanity/webhook": "^2.0.0",

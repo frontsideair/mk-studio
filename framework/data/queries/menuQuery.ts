@@ -1,7 +1,7 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/client'
 
-const INDEX_QUERY = gql`
-  query IndexQuery {
+const MENU_QUERY = gql`
+  query MenuQuery {
     menu: allMenu(where: { slug: { current: { eq: "primary-menu" } } }) {
       title
       items {
@@ -25,6 +25,6 @@ const INDEX_QUERY = gql`
       }
     }
   }
-`;
+`
 
-export default INDEX_QUERY;
+export default MENU_QUERY

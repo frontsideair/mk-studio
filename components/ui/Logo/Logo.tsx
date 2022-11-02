@@ -1,18 +1,18 @@
-import s from './Logo.module.css';
-import Link from 'next/link';
+import Link from 'next/link'
+
+import s from './Logo.module.css'
+
 interface LogoProps {
-  className?: string;
+  className?: string
 }
 const Logo = ({ className }: LogoProps) => {
   return (
-    <Link href={'/'}>
-      <a className={className}>
-        <div className={s.root}>
-          <span>Monkey</span>
-          <span>Kode</span>
-        </div>
-      </a>
+    <Link href={'/'} className={s.root}>
+      <div className={s.root}>
+        <span>Monkey</span>
+        <span>Kode</span>
+      </div>
     </Link>
-  );
-};
-export default Logo;
+  )
+}
+export default Logo
