@@ -1,0 +1,6 @@
+.heroWrap {
+  @apply flex;
+}
+.hero {
+  @apply flex w-full flex-col items-start justify-center py-32 text-left;
+}

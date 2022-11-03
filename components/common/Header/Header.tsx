@@ -1,7 +1,7 @@
 // import { IndexQuery_menu } from 'types/IndexQuery';
 
 import { initializeApollo } from '@framework/client'
-import MENU_QUERY from '@framework/data/queries/menuQuery'
+import MENU_QUERY from '@framework/data/queries/MENU_QUERY'
 
 import Nav from '../Nav/Nav'
 import s from './Header.module.css'
@@ -17,7 +17,7 @@ const Header = async () => {
   const menu = await getNavItems()
   return (
     <header className={s.root}>
-     {}  <Nav menu={menu} />
+      <Nav menu={menu} />
     </header>
   )
 }

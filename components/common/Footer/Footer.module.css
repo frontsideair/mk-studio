@@ -1,0 +1,14 @@
+.root {
+  @apply py-8;
+}
+.arrow {
+  @apply flex items-start justify-between;
+}
+
+.container {
+  @apply flex items-center justify-between;
+}
+
+.copyright {
+  @apply text-right uppercase;
+}

@@ -1,0 +1,38 @@
+.root {
+  @apply grid items-center justify-between pt-16 pb-24 lg:grid-cols-2;
+}
+
+.content {
+  @apply flex h-full flex-col justify-center;
+}
+.feature {
+  @apply flex pt-16;
+}
+.image {
+  @apply opacity-50;
+}
+.heading {
+  @apply translate-y-20 -translate-x-32 transform py-2 leading-tight;
+}
+.title {
+  --border-width: 1px;
+  @apply text-6xl font-bold text-transparent;
+  text-shadow: calc(var(--border-width) * - 1) calc(var(--border-width) * -1) 0
+      #fff,
+    var(--border-width) calc(var(--border-width) * -1) 0 #fff,
+    calc(var(--border-width) * -1) var(--border-width) 0 #fff,
+    var(--border-width) var(--border-width) 0 #fff;
+}
+@supports (-webkit-text-stroke: 1px #fff) {
+  .title {
+    -webkit-text-stroke: var(--border-width) #fff;
+    text-shadow: none;
+  }
+}
+.text {
+  @apply pt-8;
+}
+.title1 {
+  @apply text-primary;
+  -webkit-text-stroke: 0;
+}

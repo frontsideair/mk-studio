@@ -1,0 +1,21 @@
+.root {
+  --border-width: 2px;
+  @apply relative bg-quaternary p-24;
+}
+.content {
+  @apply pointer-events-none relative z-10 lg:grid;
+}
+.heading {
+  @apply text-4xl font-bold text-quaternary;
+  text-shadow: calc(var(--border-width) * - 1) calc(var(--border-width) * -1) 0
+      #fff,
+    var(--border-width) calc(var(--border-width) * -1) 0 #fff,
+    calc(var(--border-width) * -1) var(--border-width) 0 #fff,
+    var(--border-width) var(--border-width) 0 #fff;
+}
+@supports (-webkit-text-stroke: 2px #fff) {
+  .heading {
+    -webkit-text-stroke: var(--border-width) #fff;
+    text-shadow: none;
+  }
+}

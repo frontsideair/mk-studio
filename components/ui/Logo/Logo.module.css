@@ -1,5 +1,5 @@
 .root {
-  @apply font-bold text-3xl tracking-tight uppercase p-6;
+  @apply pr-6 text-3xl font-bold uppercase tracking-tight;
 }
 .root span:first-of-type {
   @apply text-white;

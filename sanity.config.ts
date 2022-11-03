@@ -8,6 +8,7 @@ import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
 import { PostsPreview } from './components/Posts/PostsPreview'
 import authorType from './schemas/author'
+import clientType from './schemas/documents/client'
 import menuType from './schemas/documents/menu'
 import accordion from './schemas/objects/accordion'
 import accordions from './schemas/objects/accordions'
@@ -21,6 +22,7 @@ import seoType from './schemas/objects/seo'
 import simplePortableText from './schemas/objects/simplePortableText'
 import postType from './schemas/page'
 import settingsType from './schemas/settings'
+
 // @TODO: update next-sanity/studio to automatically set this when needed
 const basePath = '/studio'
 
@@ -28,13 +30,14 @@ export default createConfig({
   basePath,
   projectId: 'sgrnoblg',
   dataset: 'production',
-  title: 'Monkey Kode - Let the monkey code for you',
+  title: 'Monkey Kode',
   schema: {
     // If you want more content types, you can add them to this array
     types: [
       settingsType,
       menuType,
       postType,
+      clientType,
       authorType,
       seoType,
       simplePortableText,
@@ -80,19 +83,19 @@ export default createConfig({
       // and have access to content in the form in real-time.
       // It's part of the Studio's “Structure Builder API” and is documented here:
       // https://www.sanity.io/docs/structure-builder-reference
-      defaultDocumentNode: (S, { schemaType }) => {
-        if (schemaType === 'post') {
-          return S.document().views([
-            S.view.form(),
-            S.view.component(PostsPreview).title('Preview'),
-          ])
-        }
+      // defaultDocumentNode: (S, { schemaType }) => {
+      //   if (schemaType === 'post') {
+      //     return S.document().views([
+      //       S.view.form(),
+      //       S.view.component(PostsPreview).title('Preview'),
+      //     ])
+      //   }
 
-        return null
-      },
+      //   return null
+      // },
     }),
     // Add an image asset source for Unsplash
-    unsplashImageAsset(),
+    // unsplashImageAsset(),
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({

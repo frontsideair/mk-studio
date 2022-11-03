@@ -1,8 +1,8 @@
 .root {
-  @apply w-full relative z-50;
+  @apply relative z-50 w-full;
 }
 .wrap {
-  @apply mx-auto max-w-7xl px-2 sm:px-6 lg:px-8;
+  @apply mx-auto max-w-7xl pr-2 sm:pr-6 lg:pr-8;
 }
 .innerWrap {
   @apply relative flex h-16 items-center justify-between;
@@ -24,25 +24,25 @@
 }
 
 .menuBar {
-  @apply flex flex-1 items-center lg:justify-between sm:items-stretch justify-start w-full lg:w-auto;
+  @apply flex w-full flex-1 items-center justify-start sm:items-stretch lg:w-auto lg:justify-between;
 }
 
 .logoWrap {
-  @apply flex flex-shrink-0 items-center w-full lg:w-auto;
+  @apply flex w-full flex-shrink-0 items-center lg:w-auto;
 }
 .logo {
-  @apply text-center lg:text-left w-full;
+  @apply w-full text-center lg:text-left;
 }
 .dropdownWrap {
   @apply hidden sm:ml-6 sm:block;
 }
 .dropdownInnerWrap {
-  @apply flex space-x-4 items-center h-full;
+  @apply flex h-full items-center space-x-4;
 }
 .mobileMenu {
   @apply sm:hidden;
 }
 
 .mobileMenuInnerWrap {
-  @apply flex flex-col lg:block space-y-1 px-2 pt-2 pb-3;
+  @apply flex flex-col space-y-1 px-2 pt-2 pb-3 lg:block;
 }

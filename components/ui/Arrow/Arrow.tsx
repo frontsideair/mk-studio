@@ -1,12 +1,18 @@
-import { FC, JSXElementConstructor, MouseEventHandler } from 'react';
-import s from './Arrow.module.css';
-import cn from 'classnames';
+'use client'
+
+import cn from 'classnames'
+import Link from 'next/link'
+import { FC, JSXElementConstructor, MouseEventHandler } from 'react'
+
+import s from './Arrow.module.css'
+
 interface ArrowProps {
-  elementID?: string;
-  className?: string;
-  direction?: 'left' | 'right' | 'up' | 'down';
-  element?: string;
+  elementID?: string
+  className?: string
+  direction?: 'left' | 'right' | 'up' | 'down'
+  element?: string
 }
+
 const Arrow: FC<ArrowProps> = ({
   elementID = 'main',
   className,
@@ -14,13 +20,14 @@ const Arrow: FC<ArrowProps> = ({
   element,
 }) => {
   const onClick: MouseEventHandler<HTMLAnchorElement> = (e) => {
-    const element = document.getElementById(elementID);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const Element = element || ('a' as any);
+    e.preventDefault()
+    const element = document.getElementById(elementID)
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
+  const Element = element || ('button' as any)
   return (
     <Element
-      href={`#${elementID}`}
+      // href={`#${elementID}`}
       className={cn(className, s.root, {
         [s.left]: direction === 'left',
         [s.right]: direction === 'right',
@@ -44,7 +51,7 @@ const Arrow: FC<ArrowProps> = ({
         />
       </svg>
     </Element>
-  );
-};
+  )
+}
 
-export default Arrow;
+export default Arrow
