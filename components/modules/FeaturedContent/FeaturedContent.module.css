@@ -1,12 +1,12 @@
 .root {
   --border-width: 2px;
-  @apply bg-quaternary px-16 pt-16 pb-16 lg:pb-8 relative;
+  @apply relative bg-quaternary;
 }
 .content {
-  @apply lg:grid z-10 relative pointer-events-none;
+  @apply pointer-events-none relative z-10 p-16 lg:grid;
 }
 .heading {
-  @apply text-quaternary text-4xl font-bold;
+  @apply text-4xl font-bold text-quaternary;
   text-shadow: calc(var(--border-width) * - 1) calc(var(--border-width) * -1) 0
       #fff,
     var(--border-width) calc(var(--border-width) * -1) 0 #fff,
@@ -23,26 +23,26 @@
   counter-reset: count;
 }
 .h3 {
-  @apply border-t border-primary relative;
+  @apply relative border-t border-primary;
 }
 .h3::before {
   counter-increment: count 1;
   content: '0' counter(count);
-  @apply absolute left-0 text-primary font-black -mx-10 text-sm flex items-center h-full;
+  @apply absolute left-0 -mx-10 flex h-full items-center text-sm font-black text-primary;
 }
 .subHeading {
-  @apply pt-1 inline-block;
+  @apply inline-block pt-1;
 }
 
 .item {
   @apply px-12 pt-8 lg:pt-4;
 }
 .number {
-  @apply text-primary pr-2;
+  @apply pr-2 text-primary;
 }
 
 .number {
-  @apply transform -translate-x-1/4 inline-block;
+  @apply inline-block -translate-x-1/4 transform;
 }
 .description {
   @apply font-light;

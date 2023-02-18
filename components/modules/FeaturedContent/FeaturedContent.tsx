@@ -1,6 +1,7 @@
 'use client'
 
 import AnimatedBackgroundGrid from '@components/common/AnimatedBackgroundGrid'
+import BackgroundGrid from '@components/common/BackgroundGrid'
 import LearnMore from '@components/ui/LearnMore'
 import cn from 'classnames'
 import { FC, useEffect, useRef, useState } from 'react'
@@ -44,30 +45,38 @@ const FeaturedContent: FC<FeaturedContentProps> = ({
   ])
 
   return (
-    <div className={s.root} ref={ref}>
-      <AnimatedBackgroundGrid bgWidth={elementWidth} bgHeight={elementHeight} />
-      <div className={cn(s.content, 'lg:grid-cols-4')}>
-        <div className={cn(s.highlight, 'lg:col-span-1')}>
-          {title && <h2 className={s.heading}>{title}</h2>}
-          {description && <p>{description}</p>}
-          {link && (
-            <>
-              <LearnMore className={s.learMore} link={link} direction="right" />
-            </>
-          )}
+    <>
+      <div className={s.root}>
+        <div className={cn(s.content, 'lg:grid-cols-4')}>
+          <div className={cn(s.highlight, 'lg:col-span-1')}>
+            {title && <h2 className={s.heading}>{title}</h2>}
+            {description && <p>{description}</p>}
+            {link && (
+              <>
+                <LearnMore
+                  className={s.learMore}
+                  link={link}
+                  direction="right"
+                />
+              </>
+            )}
+          </div>
+          <ol
+            className={cn(s.ol, 'lg:col-span-3', 'lg:grid', 'lg:grid-cols-3')}
+          >
+            {content?.map((item, i) => (
+              <li className={s.item} key={item.title}>
+                <h3 className={s.h3}>
+                  <span className={s.subHeading}>{item.title}</span>
+                </h3>
+                <p className={s.description}>{item.description}</p>
+              </li>
+            ))}
+          </ol>
         </div>
-        <ol className={cn(s.ol, 'lg:col-span-3', 'lg:grid', 'lg:grid-cols-3')}>
-          {content?.map((item, i) => (
-            <li className={s.item} key={item.title}>
-              <h3 className={s.h3}>
-                <span className={s.subHeading}>{item.title}</span>
-              </h3>
-              <p className={s.description}>{item.description}</p>
-            </li>
-          ))}
-        </ol>
+        <BackgroundGrid bgColor="rgb(43, 34, 114)" />
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,25 +1,31 @@
-import { FC } from 'react';
-import Arrow from '../Arrow';
-import s from './Hero.module.css';
+import Container from '@components/ui/Container'
+import { FC } from 'react'
+
+import Arrow from '../Arrow'
+import s from './Hero.module.css'
+
 interface HeroProps {
-  title: string;
-  height?: string;
-  animation?: boolean;
+  firstLine: string
+  secondLine: string
+  height?: string
+  animation?: boolean
 }
 
 const Hero: FC<HeroProps> = ({
-  title,
+  firstLine,
+  secondLine,
   height = '676px',
   animation = false,
 }) => {
   return (
-    <div className={s.root} style={{ height }}>
-      <div className={s.content}>
-        <h1 className={s.title}>{title}</h1>
-        <Arrow />
+    <Container className={s.heroWrap}>
+      <div className={s.hero}>
+        <h1>{firstLine}</h1>
+        <h1>{secondLine}</h1>
       </div>
-    </div>
-  );
-};
+      <Arrow />
+    </Container>
+  )
+}
 
-export default Hero;
+export default Hero

@@ -1,0 +1,15 @@
+.root {
+  @apply relative;
+}
+
+.animatedBg {
+  @apply relative min-h-[400px] w-full opacity-50;
+}
+
+.featuredRow {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.featuredCol {
+  @apply col-span-1;
+}

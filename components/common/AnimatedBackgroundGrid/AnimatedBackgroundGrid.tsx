@@ -8,7 +8,8 @@ import s from './AnimatedBackgroundGrid.module.css'
 interface AnimatedBackgroundGridProps {
   bgWidth: number
   bgHeight: number
-  direction?: 'up' | 'down'
+  bgColor: string
+  direction: 'up' | 'down'
 }
 
 const drawRandomSquares = ({
@@ -122,15 +123,16 @@ const drawBoard = ({
   ref,
   width,
   height,
+  bgColor,
 }: {
   ref: React.MutableRefObject<HTMLCanvasElement | null>
   width: number
   height: number
+  bgColor: string
 }) => {
   if (!ref?.current) return
   const canvas = ref.current
   const ctx = canvas?.getContext('2d')
-  const bgColor = 'rgb(43, 34, 114)'
   if (!ctx) return
   const squareColors = [
     bgColor,
@@ -161,31 +163,36 @@ const starAnimation = ({
   ref,
   width,
   height,
+  bgColor,
 }: {
   ref: React.MutableRefObject<HTMLCanvasElement | null>
   width: number
   height: number
+  bgColor: string
 }) => {
   requestAnimationFrame(starAnimation as any)
-  drawBoard({ ref, width, height })
+  drawBoard({ ref, width, height, bgColor })
 }
 
 const stopAnimation = ({
   ref,
   width,
   height,
+  bgColor,
 }: {
   ref: React.MutableRefObject<HTMLCanvasElement | null>
   width: number
   height: number
+  bgColor: string
 }) => {
   cancelAnimationFrame(starAnimation as any)
-  drawBoard({ ref, width, height })
+  drawBoard({ ref, width, height, bgColor })
 }
 const AnimatedBackgroundGrid: FC<AnimatedBackgroundGridProps> = ({
   bgWidth,
   bgHeight,
-  direction = 'up',
+  bgColor,
+  direction,
 }) => {
   const [width, setWidth] = useState(bgWidth)
   const [height, setHeight] = useState(bgHeight)
@@ -203,7 +210,7 @@ const AnimatedBackgroundGrid: FC<AnimatedBackgroundGridProps> = ({
     console.log('enter')
 
     tick = setInterval(() => {
-      drawBoard({ ref, width, height })
+      drawBoard({ ref, width, height, bgColor })
     }, speed)
   }
   const handleMouseOut = () => {
@@ -214,9 +221,9 @@ const AnimatedBackgroundGrid: FC<AnimatedBackgroundGridProps> = ({
   }
   //   const numberOfSquares = (width / 17) * (height / 17);
   useEffect(() => {
-    drawBoard({ ref, width, height })
+    drawBoard({ ref, width, height, bgColor })
     window.addEventListener('resize', handleResize)
-  }, [width, height])
+  }, [width, height, bgColor])
 
   return (
     <div

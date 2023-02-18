@@ -2,7 +2,13 @@
   @apply py-16;
 }
 .content {
-  @apply flex justify-between relative items-center;
+  @apply relative flex items-center justify-between;
 }
 .title {
+}
+.heroWrap {
+  @apply flex;
+}
+.hero {
+  @apply flex w-full flex-col items-start justify-center py-32 text-left;
 }

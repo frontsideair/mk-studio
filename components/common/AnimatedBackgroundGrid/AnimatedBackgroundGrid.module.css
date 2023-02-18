@@ -3,7 +3,7 @@
 }
 
 .square {
-  @apply bg-[#EDEEEE] opacity-80 border border-quaternary w-[19px] h-[19px]  opacity-10 inline-flex;
+  @apply bg-[#EDEEEE] border border-quaternary w-[19px] h-[19px]  opacity-10 inline-flex;
 }
 
 .canvas {
