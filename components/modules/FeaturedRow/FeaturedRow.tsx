@@ -58,7 +58,7 @@ export default function FeauturedRow({ title, images = [] }: FeaturedRowProps) {
               },
               i
             ) => (
-              <li key={name} className={cn(s.li, 'lg:col-span-1')}>
+              <li key={`${name}_${i}`} className={cn(s.li, 'lg:col-span-1')}>
                 <Image
                   src={url}
                   alt={altText ?? name}
