@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   images: {
     remotePatterns: [
       { hostname: 'cdn.sanity.io' },
@@ -16,5 +16,8 @@ module.exports = {
   },
   experimental: {
     appDir: true,
+    typedRoutes: true,
   },
 }
+
+module.exports = nextConfig

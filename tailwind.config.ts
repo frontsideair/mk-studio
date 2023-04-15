@@ -1,5 +1,6 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from 'tailwindcss'
+
+export default {
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -27,7 +28,7 @@ module.exports = {
         tighter: '-.04em',
       },
       lineHeight: {
-        tight: 1.2,
+        tight: '1.2',
       },
       fontSize: {
         '5xl': '2.5rem',
@@ -42,4 +43,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+} satisfies Config

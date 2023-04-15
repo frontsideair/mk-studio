@@ -2,10 +2,12 @@ import '@styles/globals.css'
 
 import Footer from '@components/common/Footer'
 import Header from '@components/common/Header'
-import { Red_Hat_Display } from '@next/font/google'
+import { Red_Hat_Display } from 'next/font/google'
 import { ReactNode } from 'react'
 
-const RedHatDisplay = Red_Hat_Display()
+const RedHatDisplay = Red_Hat_Display({
+  subsets: ['latin'],
+})
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className={RedHatDisplay.className}>
