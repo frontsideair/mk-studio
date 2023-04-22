@@ -11,6 +11,9 @@
 .image {
   @apply opacity-50;
 }
+.image img {
+  @apply object-cover object-center w-full h-full;
+}
 .heading {
   @apply translate-y-20 -translate-x-32 transform py-2 leading-tight;
 }

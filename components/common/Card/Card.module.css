@@ -16,3 +16,7 @@
 .hr {
   @apply border-secondary border-2 w-full block my-3;
 }
+
+.icon {
+  @apply pb-3 pr-2;
+}

@@ -1,8 +1,12 @@
 .root {
-  @apply lg:grid grid-cols-3 py-14;
+  @apply lg:grid grid-cols-3 py-14 mx-auto;
 }
 
 .h2 {
-  --heading-color-border-height: 18px;
+  --heading-color-border-height: 10px;
   @apply text-3xl;
+}
+
+.col {
+  @apply p-6;
 }

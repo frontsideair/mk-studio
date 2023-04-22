@@ -24,11 +24,11 @@ const FeaturedText = ({
       <div className={s.feature}>
         <figure className={s.image}>
           <Image
+            loading="lazy"
             src={imageSrc}
             alt={imageAlt}
             width={504}
             height={444}
-            objectFit="cover"
           />
         </figure>
         <div className={s.heading}>

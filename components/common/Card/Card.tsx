@@ -17,7 +17,7 @@ const Card: FC<CardProps> = ({ icon, title, description, className, tags }) => {
   return (
     <div className={cn(s.col, className)}>
       <div className={s.header}>
-        {icon}
+        <span className={s.icon}>{icon}</span>
         <h2>{title}</h2>
       </div>
       <div className={s.content}>
