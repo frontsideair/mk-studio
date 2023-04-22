@@ -42,7 +42,11 @@ export default function FeauturedRow({ title, images = [] }: FeaturedRowProps) {
       />
       <div className={cn(s.content)}>
         <div className={cn(s.highlight)}>
-          {title && <h2 className={s.heading}>{title}</h2>}
+          {title && (
+            <h2 className={cn(s.heading, 'headingTreatmentSecondary')}>
+              {title}
+            </h2>
+          )}
         </div>
         <ol className={cn(s.ol)}>
           {images.map(

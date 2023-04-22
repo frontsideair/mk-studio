@@ -35,7 +35,7 @@ const FeaturedText = ({
           {new Array(titleRepeat).fill(0).map((_, i) => (
             <h2
               key={`${title}_${i}`}
-              className={cn(s.title, {
+              className={cn(s.title, 'headingTreatmentSecondary', {
                 [s.title1]: i === 3,
               })}
             >

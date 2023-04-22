@@ -1,11 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root {
+  --heading-primary-color-border-height: 40px;
+  --heading-secondary-border-width: 2px;
+}
 html,
 body {
   @apply m-0 overflow-x-hidden scroll-smooth bg-black p-0 font-sans text-white;
 }
+.headingTreatmentPrimary {
+  @apply relative z-10 inline-block;
+}
+.headingTreatmentPrimary::after {
+  @apply absolute bottom-0 left-0 -z-10 h-[--heading-primary-color-border-height] w-full bg-quaternary;
+  content: ' ';
+}
+.headingTreatmentSecondary {
+  @apply font-bold;
+  text-shadow: calc(var(--heading-secondary-border-width) * - 1)
+      calc(var(--heading-secondary-border-width) * -1) 0 #fff,
+    var(--heading-secondary-border-width)
+      calc(var(--heading-secondary-border-width) * -1) 0 #fff,
+    calc(var(--heading-secondary-border-width) * -1)
+      var(--heading-secondary-border-width) 0 #fff,
+    var(--heading-secondary-border-width) var(--heading-secondary-border-width)
+      0 #fff;
+}
+@supports (-webkit-text-stroke: 2px #fff) {
+  .headingTreatmentSecondary {
+    -webkit-text-stroke: var(--heading-secondary-border-width) #fff;
+    text-shadow: none;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -14,13 +42,17 @@ h5,
 h6 {
   @apply font-bold uppercase;
 }
+
 h1 {
+  @apply text-6xl;
+}
+/* h1 {
   @apply relative z-10 inline-block text-6xl;
 }
 h1::after {
   @apply absolute bottom-0 left-0 -z-10 h-[40px] w-full bg-quaternary;
   content: ' ';
-}
+} */
 a {
   @apply text-primary;
 }

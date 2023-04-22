@@ -12,3 +12,7 @@
 .header h2 {
   @apply col-span-3;
 }
+
+.hr {
+  @apply border-secondary border-2 w-full block my-3;
+}

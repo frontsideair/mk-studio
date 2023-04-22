@@ -17,5 +17,6 @@
       "withLazy": false,
       "withIndex": true
     }
-  }
+  },
+  "usesStyledComponents": false
 }

@@ -49,7 +49,11 @@ const FeaturedContent: FC<FeaturedContentProps> = ({
       <div className={s.root}>
         <div className={cn(s.content, 'lg:grid-cols-4')}>
           <div className={cn(s.highlight, 'lg:col-span-1')}>
-            {title && <h2 className={s.heading}>{title}</h2>}
+            {title && (
+              <h2 className={cn(s.heading, 'headingTreatmentSecondary')}>
+                {title}
+              </h2>
+            )}
             {description && <p>{description}</p>}
             {link && (
               <>

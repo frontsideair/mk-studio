@@ -2,6 +2,7 @@ import FeaturedClients from '@components/modules/FeaturedClients/FeaturedClients
 import FeaturedContent from '@components/modules/FeaturedContent'
 import FeaturedRow from '@components/modules/FeaturedRow'
 import FeaturedText from '@components/modules/FeaturedText'
+import TrustedPartners from '@components/pages/TrustedPartners/TrustedPartners'
 import Arrow from '@components/ui/Arrow'
 import Container from '@components/ui/Container'
 import { NextPage } from 'next'
@@ -13,8 +14,13 @@ const Page: NextPage = () => {
     <>
       <Container className={s.heroWrap}>
         <div className={s.hero}>
-          <h1>Changing the world.</h1>
-          <h1>One piece of code at a time.</h1>
+          <h1>
+            <span className="headingTreatmentPrimary">Changing the world.</span>
+            <br />
+            <span className="headingTreatmentPrimary">
+              One piece of code at a time.
+            </span>
+          </h1>
         </div>
         <Arrow />
       </Container>
@@ -57,6 +63,9 @@ const Page: NextPage = () => {
         <section>
           {/* @ts-expect-error Async Server Component */}
           <FeaturedClients />
+        </section>
+        <section>
+          <TrustedPartners />
         </section>
       </main>
     </>
