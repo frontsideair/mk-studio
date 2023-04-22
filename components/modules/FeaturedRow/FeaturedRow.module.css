@@ -3,7 +3,7 @@
   @apply relative bg-quaternary p-24;
 }
 .content {
-  @apply pointer-events-none relative z-10 lg:grid;
+  @apply pointer-events-none relative z-10 lg:grid lg:grid-cols-4;
 }
 .heading {
   @apply text-4xl font-bold text-quaternary;
@@ -18,4 +18,16 @@
     -webkit-text-stroke: var(--border-width) #fff;
     text-shadow: none;
   }
+}
+
+.ol {
+  @apply lg:col-span-3 lg:grid lg:grid-cols-4 items-center gap-10;
+}
+
+.li {
+  @apply lg:col-span-1;
+}
+
+.highlight {
+  @apply lg:col-span-1;
 }

@@ -2,15 +2,11 @@ import { gql } from '@apollo/client'
 
 const CLIENTS_QUERY = gql`
   query ClientsQuery {
-    clients: allClient {
+    clients: allClient(limit: 5) {
       name
-      slug {
-        current
-      }
       logo {
         asset {
           url
-          altText
           metadata {
             dimensions {
               width

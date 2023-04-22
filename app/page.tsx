@@ -55,6 +55,7 @@ const Page: NextPage = () => {
           </Container>
         </section>
         <section>
+          {/* @ts-expect-error Async Server Component */}
           <FeaturedClients />
         </section>
       </main>

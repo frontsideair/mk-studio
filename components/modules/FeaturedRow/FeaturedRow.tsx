@@ -15,7 +15,7 @@ export default function FeauturedRow({ title, images = [] }: FeaturedRowProps) {
   const [elementHeight, setElementHeight] = useState(458)
   const [elementWidth, setElementWidth] = useState(1367)
   const ref = useRef<HTMLDivElement>(null)
-  console.log(images)
+  console.log({ images })
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,15 +35,16 @@ export default function FeauturedRow({ title, images = [] }: FeaturedRowProps) {
   return (
     <div className={s.root}>
       <AnimatedBackgroundGrid
+        bgColor="transparent"
         bgWidth={elementWidth}
         bgHeight={elementHeight}
         direction="down"
       />
-      <div className={cn(s.content, 'lg:grid-cols-4')}>
-        <div className={cn(s.highlight, 'lg:col-span-1')}>
+      <div className={cn(s.content)}>
+        <div className={cn(s.highlight)}>
           {title && <h2 className={s.heading}>{title}</h2>}
         </div>
-        <ol className={cn(s.ol, 'lg:col-span-3', 'lg:grid', 'lg:grid-cols-3')}>
+        <ol className={cn(s.ol)}>
           {images.map(
             (
               {
@@ -58,10 +59,11 @@ export default function FeauturedRow({ title, images = [] }: FeaturedRowProps) {
               },
               i
             ) => (
-              <li key={`${name}_${i}`} className={cn(s.li, 'lg:col-span-1')}>
+              <li key={`${name}_${i}`} className={cn(s.li)}>
                 <Image
+                  loading="lazy"
                   src={url}
-                  alt={altText ?? name}
+                  alt={altText ?? name ?? 'Client Logo'}
                   width={width}
                   height={height}
                 />

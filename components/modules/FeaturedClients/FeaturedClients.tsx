@@ -8,7 +8,7 @@ const getClients = async () => {
   const { data } = await apolloClient.query({
     query: CLIENTS_QUERY,
   })
-  //   console.log('data', data)
+  console.log('data', data)
   return data?.clients
 }
 
