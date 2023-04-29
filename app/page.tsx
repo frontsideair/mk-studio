@@ -1,6 +1,6 @@
 import FeaturedClients from '@components/modules/FeaturedClients/FeaturedClients'
 import FeaturedContent from '@components/modules/FeaturedContent'
-import FeaturedRow from '@components/modules/FeaturedRow'
+// import FeaturedRow from '@components/modules/FeaturedRow'
 import FeaturedText from '@components/modules/FeaturedText'
 import TrustedPartners from '@components/pages/TrustedPartners/TrustedPartners'
 import Arrow from '@components/ui/Arrow'
