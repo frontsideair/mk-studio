@@ -3,27 +3,17 @@ import FeaturedContent from '@components/modules/FeaturedContent'
 // import FeaturedRow from '@components/modules/FeaturedRow'
 import FeaturedText from '@components/modules/FeaturedText'
 import TrustedPartners from '@components/pages/TrustedPartners/TrustedPartners'
-import Arrow from '@components/ui/Arrow'
 import Container from '@components/ui/Container'
+import Hero from '@components/ui/Hero/Hero'
 import { NextPage } from 'next'
-
-import s from './Home.module.css'
 
 const Page: NextPage = () => {
   return (
     <>
-      <Container className={s.heroWrap}>
-        <div className={s.hero}>
-          <h1>
-            <span className="headingTreatmentPrimary">Changing the world.</span>
-            <br />
-            <span className="headingTreatmentPrimary">
-              One piece of code at a time.
-            </span>
-          </h1>
-        </div>
-        <Arrow />
-      </Container>
+      <Hero
+        firstLine="Changing the world."
+        secondLine="One piece of code at a time."
+      />
 
       <main id="main">
         <section>
