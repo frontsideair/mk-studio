@@ -81,7 +81,7 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
             />
           </button>
         </div>
-        <div className="text-center col-span-5">
+        <div className="text-center lg:col-span-5">
           {sent &&
             !pending &&
             "Your inquiry has been sent. We'll be in touch soon!"}

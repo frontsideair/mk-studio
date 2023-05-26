@@ -14,7 +14,7 @@ const Footer = () => {
         </Link>
         <div className={s.arrow}>
           <Arrow direction="up" />{' '}
-          <span className="text-primary uppercase absolute w-max left-full top-8">
+          <span className="text-primary uppercase absolute w-max left-full top-8 hidden lg:inline">
             Back to the top
           </span>
         </div>
