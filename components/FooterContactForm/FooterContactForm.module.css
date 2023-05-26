@@ -1,0 +1,13 @@
+.root {
+  @apply grid lg:grid-cols-5 p-16 gap-4 items-start;
+}
+
+.heading {
+  @apply text-4xl;
+}
+
+.input {
+  @apply w-full px-4 py-2;
+  @apply border border-primary bg-black;
+  @apply placeholder:italic placeholder-primary placeholder:font-bold;
+}

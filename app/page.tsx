@@ -1,3 +1,4 @@
+import FooterContactForm from '@components/FooterContactForm'
 import FeaturedClients from '@components/modules/FeaturedClients/FeaturedClients'
 import FeaturedContent from '@components/modules/FeaturedContent'
 // import FeaturedRow from '@components/modules/FeaturedRow'
@@ -56,6 +57,9 @@ const Page: NextPage = () => {
         </section>
         <section>
           <TrustedPartners />
+        </section>
+        <section>
+          <FooterContactForm />
         </section>
       </main>
     </>
