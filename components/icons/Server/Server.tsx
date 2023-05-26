@@ -17,8 +17,8 @@ const Server: FC<ServerProps> = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M61 16C61 17.6569 59.6569 19 58 19H55V22H58C59.6569 22 61 23.3431 61 25V37C61 38.6569 59.6569 40 58 40H55V43H58C59.6569 43 61 44.3431 61 46V58C61 59.6569 59.6569 61 58 61H4C2.34312 61 1 59.6569 1 58V46C1 44.3431 2.34312 43 4 43H7V40H4C2.34312 40 1 38.6569 1 37V25C1 23.3431 2.34312 22 4 22H7V19H4C2.34312 19 1 17.6569 1 16V4C1 2.34312 2.34312 1 4 1H58C59.6569 1 61 2.34312 61 4V16ZM59 46C59 45.4478 58.5522 45 58 45H4C3.44775 45 3 45.4478 3 46V58C3 58.5522 3.44775 59 4 59H58C58.5522 59 59 58.5522 59 58V46ZM9 43V40H11V43H9ZM13 40V43H49V40H13ZM51 43V40H53V43H51ZM59 25C59 24.4478 58.5522 24 58 24H4C3.44775 24 3 24.4478 3 25V37C3 37.5522 3.44775 38 4 38H58C58.5522 38 59 37.5522 59 37V25ZM9 22V19H11V22H9ZM13 19V22H49V19H13ZM51 22V19H53V22H51ZM3 16C3 16.5522 3.44775 17 4 17H58C58.5522 17 59 16.5522 59 16V4C59 3.44775 58.5522 3 58 3H4C3.44775 3 3 3.44775 3 4V16Z"
           fill="#E35613"
         />
@@ -27,8 +27,8 @@ const Server: FC<ServerProps> = () => {
           fill="black"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12.816 8.99996H33C33.5523 8.99996 34 9.44771 34 9.99996C34 10.5522 33.5523 11 33 11H12.816C12.514 11.8543 11.8419 12.5263 10.9875 12.8283C9.4255 13.3807 7.71138 12.5621 7.15913 11C6.60688 9.43783 7.42563 7.72396 8.98763 7.17158C10.5496 6.61921 12.2638 7.43783 12.816 8.99996ZM9 9.99996C9 10.5522 9.44775 11 10 11C10.5523 11 11 10.5522 11 9.99996C11 9.44771 10.5523 8.99996 10 8.99996C9.44775 8.99996 9 9.44771 9 9.99996Z"
           fill="#E35613"
         />
@@ -43,7 +43,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -52,7 +52,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -61,7 +61,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -70,7 +70,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -79,7 +79,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="45"
@@ -88,7 +88,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -97,7 +97,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -106,7 +106,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -115,7 +115,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -124,7 +124,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="45"
@@ -133,7 +133,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -142,7 +142,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -151,7 +151,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -160,7 +160,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -169,11 +169,11 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12.816 30H33C33.5523 30 34 30.4477 34 31C34 31.5522 33.5523 32 33 32H12.8159C12.5139 32.8542 11.8419 33.5263 10.9875 33.8283C9.4255 34.3807 7.71138 33.5621 7.15913 32C6.60688 30.4378 7.42563 28.724 8.98763 28.1716C10.5496 27.6192 12.2638 28.4378 12.816 30ZM9 31C9 31.5522 9.44775 32 10 32C10.5523 32 11 31.5522 11 31C11 30.4477 10.5523 30 10 30C9.44775 30 9 30.4477 9 31Z"
           fill="#E35613"
         />
@@ -188,7 +188,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -197,7 +197,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -206,7 +206,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -215,7 +215,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -224,7 +224,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="45"
@@ -233,7 +233,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -242,7 +242,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -251,7 +251,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -260,7 +260,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -269,7 +269,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="45"
@@ -278,7 +278,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -287,7 +287,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -296,7 +296,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -305,7 +305,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -314,11 +314,11 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M12.816 51H33C33.5523 51 34 51.4477 34 52C34 52.5522 33.5523 53 33 53H12.8159C12.5139 53.8542 11.8419 54.5263 10.9875 54.8283C9.4255 55.3807 7.71138 54.5621 7.15913 53C6.60688 51.4378 7.42563 49.724 8.98763 49.1716C10.5496 48.6192 12.2638 49.4378 12.816 51ZM9 52C9 52.5522 9.44775 53 10 53C10.5523 53 11 52.5522 11 52C11 51.4477 10.5523 51 10 51C9.44775 51 9 51.4477 9 52Z"
           fill="#E35613"
         />
@@ -333,7 +333,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -342,7 +342,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -351,7 +351,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -360,7 +360,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -369,7 +369,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="45"
@@ -378,7 +378,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -387,7 +387,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -396,7 +396,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -405,7 +405,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -414,7 +414,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="45"
@@ -423,7 +423,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="49"
@@ -432,7 +432,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="53"
@@ -441,7 +441,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="41"
@@ -450,7 +450,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
         <rect
           x="37"
@@ -459,7 +459,7 @@ const Server: FC<ServerProps> = () => {
           height="2"
           fill="#E35613"
           stroke="black"
-          stroke-width="0.5"
+          strokeWidth="0.5"
         />
       </svg>
     </div>
