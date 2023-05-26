@@ -34,7 +34,7 @@
   @apply inline-block -translate-x-1/4 transform;
 }
 .description {
-  @apply font-light;
+  @apply font-extralight text-lg;
 }
 
 .learnMore {

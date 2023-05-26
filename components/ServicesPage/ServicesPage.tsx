@@ -35,7 +35,7 @@ const ServicesPage: FC<ServicesPageProps> = () => {
         <BackgroundGrid bgColor="black" direction="down" initialHeight={240} />
       </div>
 
-      <main>
+      <main id="main">
         <section>
           <Container className={s.container}>
             <div className={s.featuredRow}>

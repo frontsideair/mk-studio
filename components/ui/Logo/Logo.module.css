@@ -2,8 +2,8 @@
   @apply pr-6 text-3xl font-bold uppercase tracking-tight;
 }
 .root span:first-of-type {
-  @apply text-white;
+  @apply text-primary;
 }
 .root span:last-of-type {
-  @apply text-primary;
+  @apply text-white;
 }
