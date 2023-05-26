@@ -14,6 +14,7 @@ specifiers:
   '@sanity/webhook': ^2.0.0
   '@tailwindcss/forms': ^0.5.3
   '@types/react': ^18.2.7
+  '@types/react-dom': ^18.2.4
   autoprefixer: ^10.4.14
   classnames: ^2.3.2
   date-fns: ^2.29.3
@@ -25,6 +26,7 @@ specifiers:
   lodash: ^4.17.21
   next: ^13.4.4
   next-sanity: ^4.1.7
+  nodemailer: ^6.9.2
   phosphor-react: ^1.4.1
   postcss: ^8.4.23
   prettier: ^2.8.7
@@ -58,6 +60,7 @@ dependencies:
   lodash: 4.17.21
   next: 13.4.4_biqbaboplfbrettd7655fr4n2y
   next-sanity: 4.1.7_wkr6gqqzfoicy6ay7wqdxxvoti
+  nodemailer: 6.9.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-is: 18.2.0
@@ -68,6 +71,7 @@ dependencies:
 devDependencies:
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.3.1
   '@types/react': 18.2.7
+  '@types/react-dom': 18.2.4
   autoprefixer: 10.4.14_postcss@8.4.23
   eslint: 8.39.0
   eslint-config-next: 13.4.4_iacogk7kkaymxepzhgcbytyi7q
@@ -1791,6 +1795,12 @@ packages:
     dependencies:
       '@types/react': 18.2.7
     dev: false
+
+  /@types/react-dom/18.2.4:
+    resolution: {integrity: sha512-G2mHoTMTL4yoydITgOGwWdWMVd8sNgyEP85xVmMKAPUBwQWm9wBPQUmvbeF4V3WBY1P7mmL4BkjQ0SqUpf1snw==}
+    dependencies:
+      '@types/react': 18.2.7
+    dev: true
 
   /@types/react-is/17.0.3:
     resolution: {integrity: sha512-aBTIWg1emtu95bLTLx0cpkxwGW3ueZv71nE2YFBpL8k/z5czEW8yYpOo8Dp+UUAFAtKwNaOsh/ioSeQnWlZcfw==}
@@ -4720,6 +4730,11 @@ packages:
 
   /node-releases/2.0.10:
     resolution: {integrity: sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==}
+
+  /nodemailer/6.9.2:
+    resolution: {integrity: sha512-4+TYaa/e1nIxQfyw/WzNPYTEZ5OvHIDEnmjs4LPmIfccPQN+2CYKmGHjWixn/chzD3bmUTu5FMfpltizMxqzdg==}
+    engines: {node: '>=6.0.0'}
+    dev: false
 
   /normalize-package-data/2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
