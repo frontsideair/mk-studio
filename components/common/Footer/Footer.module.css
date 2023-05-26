@@ -1,8 +1,8 @@
 .root {
-  @apply py-8;
+  @apply border-t border-white overflow-hidden;
 }
 .arrow {
-  @apply flex items-start justify-between;
+  @apply flex items-start justify-between relative h-24 p-4;
 }
 
 .container {
