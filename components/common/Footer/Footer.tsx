@@ -1,6 +1,7 @@
 import Logo from '@components/icons/Logo/Logo'
 import Arrow from '@components/ui/Arrow'
 import Container from '@components/ui/Container'
+import Link from 'next/link'
 
 import s from './Footer.module.css'
 
@@ -8,9 +9,9 @@ const Footer = () => {
   return (
     <footer className={s.root}>
       <Container className={s.container}>
-        <div className="flex-1">
+        <Link href="/" className="flex-1">
           <Logo />
-        </div>
+        </Link>
         <div className={s.arrow}>
           <Arrow direction="up" />{' '}
           <span className="text-primary uppercase absolute w-max left-full top-8">
