@@ -2,7 +2,7 @@
   @apply relative bg-quaternary;
 }
 .content {
-  @apply pointer-events-none relative z-10 p-16 lg:grid;
+  @apply pointer-events-none relative z-10 p-16 grid;
 }
 .heading {
   @apply text-4xl;
@@ -24,7 +24,7 @@
 }
 
 .item {
-  @apply px-12 pt-8 lg:pt-4;
+  @apply pl-12 pt-8 lg:pt-4;
 }
 .number {
   @apply pr-2 text-primary;
@@ -34,7 +34,7 @@
   @apply inline-block -translate-x-1/4 transform;
 }
 .description {
-  @apply font-light;
+  @apply font-extralight text-lg;
 }
 
 .learnMore {

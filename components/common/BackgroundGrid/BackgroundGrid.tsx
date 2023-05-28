@@ -8,13 +8,15 @@ import s from './BackgroundGrid.module.css'
 export interface BackgroundGridProps {
   bgColor?: string
   direction?: 'up' | 'down'
+  initialHeight?: number
 }
 
 const BackgroundGrid: FC<BackgroundGridProps> = ({
   bgColor = 'rgb(43, 34, 114)',
   direction = 'up',
+  initialHeight = 458,
 }) => {
-  const [elementHeight, setElementHeight] = useState(458)
+  const [elementHeight, setElementHeight] = useState(initialHeight)
   const [elementWidth, setElementWidth] = useState(1367)
   const ref = useRef<HTMLDivElement>(null)
   console.log('ref height', ref.current?.clientHeight)

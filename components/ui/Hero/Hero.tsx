@@ -19,10 +19,10 @@ const Hero: FC<HeroProps> = ({
 }) => {
   return (
     <Container className={s.heroWrap}>
-      <div className={s.hero}>
-        <h1>{firstLine}</h1>
-        <h1>{secondLine}</h1>
-      </div>
+      <h1 className={s.hero}>
+        <span className="headingTreatmentPrimary">{firstLine}</span>
+        <span className="headingTreatmentPrimary">{secondLine}</span>
+      </h1>
       <Arrow />
     </Container>
   )
