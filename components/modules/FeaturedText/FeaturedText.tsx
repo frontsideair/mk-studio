@@ -10,6 +10,7 @@ interface FeaturedTextProps {
   imageSrc: string
   imageAlt: string
   titleRepeat?: number
+  showArrow?: boolean
 }
 
 const FeaturedText = ({
@@ -18,6 +19,7 @@ const FeaturedText = ({
   imageSrc,
   imageAlt,
   titleRepeat = 5,
+  showArrow = true,
 }: FeaturedTextProps) => {
   return (
     <div className={s.root}>
@@ -45,7 +47,7 @@ const FeaturedText = ({
         </div>
       </div>
       <div className={s.content}>
-        <Arrow direction="down" />
+        {showArrow && <Arrow direction="down" />}
         <div
           className={s.text}
           dangerouslySetInnerHTML={{ __html: text }}

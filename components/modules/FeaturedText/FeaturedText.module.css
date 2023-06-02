@@ -3,7 +3,7 @@
 }
 
 .content {
-  @apply flex h-full flex-col justify-center;
+  @apply flex h-full flex-col justify-end;
 }
 .feature {
   @apply flex pt-16;
