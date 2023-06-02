@@ -1,6 +1,6 @@
 import BackgroundGrid from '@components/common/BackgroundGrid'
 import Card from '@components/common/Card'
-import FooterContactForm from '@components/FooterContactForm/FooterContactForm'
+import FooterContactForm from '@components/modules/FooterContactForm/FooterContactForm'
 import API from '@components/icons/API/API'
 import CMS from '@components/icons/CMS/CMS'
 import Desktop from '@components/icons/Desktop'
