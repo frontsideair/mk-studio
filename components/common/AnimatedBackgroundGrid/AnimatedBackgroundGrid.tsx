@@ -199,10 +199,6 @@ const AnimatedBackgroundGrid: FC<AnimatedBackgroundGridProps> = ({
   const ref = useRef<HTMLCanvasElement>(null)
   const speed = 200
   let tick: NodeJS.Timer | null = null
-  const handleResize = () => {
-    setWidth(innerWidth || ref.current?.clientWidth || width)
-    setHeight(ref.current?.clientHeight || height)
-  }
 
   const handleMosueEnter = () => {
     // starAnimation({ ref, width, height });
@@ -221,6 +217,11 @@ const AnimatedBackgroundGrid: FC<AnimatedBackgroundGridProps> = ({
   }
   //   const numberOfSquares = (width / 17) * (height / 17);
   useEffect(() => {
+    const handleResize = () => {
+      setWidth(innerWidth || ref.current?.clientWidth || width)
+      setHeight(ref.current?.clientHeight || height)
+    }
+
     drawBoard({ ref, width, height, bgColor })
     window.addEventListener('resize', handleResize)
   }, [width, height, bgColor])
