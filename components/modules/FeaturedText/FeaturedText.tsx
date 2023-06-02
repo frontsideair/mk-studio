@@ -1,13 +1,13 @@
 import Arrow from '@components/ui/Arrow'
 import cn from 'classnames'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 
 import s from './FeaturedText.module.css'
 
 interface FeaturedTextProps {
   title: string
   text: string
-  imageSrc: string
+  imageSrc: StaticImageData
   imageAlt: string
   titleRepeat?: number
   showArrow?: boolean
@@ -25,13 +25,7 @@ const FeaturedText = ({
     <div className={s.root}>
       <div className={s.feature}>
         <figure className={s.image}>
-          <Image
-            loading="lazy"
-            src={imageSrc}
-            alt={imageAlt}
-            width={504}
-            height={444}
-          />
+          <Image loading="lazy" src={imageSrc} alt={imageAlt} />
         </figure>
         <div className={s.heading}>
           {new Array(titleRepeat).fill(0).map((_, i) => (

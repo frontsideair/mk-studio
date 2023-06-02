@@ -207,7 +207,7 @@ const HeadlessEcommercePage: FC<HeadlessEcommercePageProps> = () => {
           <Container>
             <FeaturedText
               title="Ecommerce"
-              imageSrc={hoodhatImage.src}
+              imageSrc={hoodhatImage}
               imageAlt="Hood Hat Website"
               text="Slick, clickable, tappable sites. Bespoke shopping cart experiences that make checkout a breeze. AI-powered chatbots that redefine online shopping and customer service. Rely on our technical expertise in ecommerce to help bolster your brand, engage your audience and optimize conversions – without ever breaking a sweat."
               showArrow={false}

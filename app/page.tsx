@@ -5,6 +5,7 @@ import FooterContactForm from '@components/modules/FooterContactForm'
 import TrustedPartners from '@components/modules/TrustedPartners/TrustedPartners'
 import Container from '@components/ui/Container'
 import Hero from '@components/ui/Hero/Hero'
+import goldenStateImage from '@images/goldenstate-preview.jpg'
 import { NextPage } from 'next'
 
 const Page: NextPage = () => {
@@ -43,7 +44,7 @@ const Page: NextPage = () => {
           <Container>
             <FeaturedText
               title="Innovative"
-              imageSrc="/goldenstate-preview.jpg"
+              imageSrc={goldenStateImage}
               imageAlt="Golden State Website"
               text="<p>At MonkeyKode we’re passionate about customization. That’s why we offer bespoke websites and apps, innovative customized e-commerce solutions and – soon – Web3 development. We hope you’ll enjoy our smart, innovative, scalable approaches and join us in creating online experiences designed for the future.</p>
               <p>We build e-commerce solutions for merchants of all sizes embracing the MACH ecosystem – Microservices based, API-first, Cloud-native SaaS and Headless. OK, in simple terms – we help you  offer a better digital experience to your customers, whether they’re on a phone, a watch, POS or the metaverse. Pluggable. Scalable. Future ready. Are you ready?</p>"
