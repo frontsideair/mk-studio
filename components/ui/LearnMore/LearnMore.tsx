@@ -6,11 +6,13 @@ import { FC, PropsWithChildren } from 'react'
 
 import Arrow from '../Arrow'
 import s from './LearnMore.module.css'
+
 interface LearnMoreProps {
   link?: string
   direction?: 'up' | 'down' | 'left' | 'right'
   className?: string
 }
+
 const LearnMore: FC<PropsWithChildren<LearnMoreProps>> = ({
   link = '/',
   direction = 'right',
@@ -27,10 +29,8 @@ const LearnMore: FC<PropsWithChildren<LearnMoreProps>> = ({
       className={cn(s.root, className)}
       onClickCapture={handleClick}
     >
-      <div className={s.root}>
-        <span className={s.text}>{children}</span>
-        <Arrow element={`button`} direction={direction} />
-      </div>
+      <span className={s.text}>{children}</span>
+      <Arrow element={`button`} direction={direction} />
     </Link>
   )
 }
