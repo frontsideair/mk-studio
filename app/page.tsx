@@ -1,7 +1,6 @@
 import FooterContactForm from '@components/FooterContactForm'
 import FeaturedClients from '@components/modules/FeaturedClients/FeaturedClients'
 import FeaturedContent from '@components/modules/FeaturedContent'
-// import FeaturedRow from '@components/modules/FeaturedRow'
 import FeaturedText from '@components/modules/FeaturedText'
 import TrustedPartners from '@components/pages/TrustedPartners/TrustedPartners'
 import Container from '@components/ui/Container'
