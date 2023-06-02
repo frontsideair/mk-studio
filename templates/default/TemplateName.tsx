@@ -1,13 +1,17 @@
 // templates/component/TemplateName.js
 
-import { FC } from 'react'
+import { VariantProps } from 'class-variance-authority'
+import { FC, PropsWithChildren } from 'react'
 
-import s from './TemplateName.module.css'
+import { TemplateNameStyle } from './TemplateNameStyle'
 
-export interface TemplateNameProps {}
+export interface TemplateNameProps
+  extends VariantProps<typeof TemplateNameStyle> {}
 
-const TemplateName: FC<TemplateNameProps> = () => {
-  return <div className={s.root}></div>
+const TemplateName: FC<PropsWithChildren<TemplateNameProps>> = ({
+  children,
+}) => {
+  return <div className={TemplateNameStyle({})}>{children}</div>
 }
 
 export default TemplateName
