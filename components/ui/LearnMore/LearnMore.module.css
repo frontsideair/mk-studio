@@ -1,5 +1,5 @@
 .root {
-  @apply flex justify-between items-center w-full pr-10;
+  @apply flex gap-12 justify-between items-center w-full pr-10 pointer-events-auto;
 }
 .text {
   @apply text-white uppercase text-sm;

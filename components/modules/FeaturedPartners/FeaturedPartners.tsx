@@ -1,16 +1,14 @@
 // templates/component/FeaturedPartners.js
 
 import BackgroundGrid from '@components/common/BackgroundGrid'
-import Arrow from '@components/ui/Arrow/Arrow'
+import LearnMore from '@components/ui/LearnMore/LearnMore'
 import { VariantProps } from 'class-variance-authority'
 import Image from 'next/image'
-import Link from 'next/link'
 import { FC } from 'react'
 
 import {
   ContentStyle,
   FeaturedPartnersStyle,
-  LinkStyle,
   ListItemStyle,
 } from './FeaturedPartnersStyle'
 
@@ -43,10 +41,9 @@ const FeaturedPartners: FC<FeaturedPartnersProps> = ({ content }) => {
               />
             </figure>
             <p>{description}</p>
-            <Link href={{ pathname: href }} className={LinkStyle()}>
+            <LearnMore link={href} className="max-w-fit">
               Hire us
-              <Arrow direction="right" />
-            </Link>
+            </LearnMore>
           </li>
         ))}
       </ul>
