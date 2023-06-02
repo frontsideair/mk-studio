@@ -47,7 +47,7 @@ const FeaturedText = ({
         </div>
       </div>
       <div className={s.content}>
-        {showArrow && <Arrow direction="down" />}
+        {showArrow ? <Arrow direction="down" /> : <div className="h-24" />}
         <div
           className={s.text}
           dangerouslySetInnerHTML={{ __html: text }}
