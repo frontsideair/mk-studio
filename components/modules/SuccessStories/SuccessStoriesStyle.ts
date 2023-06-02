@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority'
 
-export const SuccessStoriesStyle = cva('lg:grid grid-cols-5')
+export const SuccessStoriesStyle = cva('grid lg:grid-cols-5 gap-4')
 
 export const ListStyle = cva('lg:col-span-4 flex flex-col gap-32')
 
@@ -12,7 +12,9 @@ export const ImageStyle = cva('opacity-25')
 
 export const ImageContainerStyle = cva('relative col-span-2')
 
-export const OverlayStyle = cva('absolute bottom-0 px-4 w-full font-extralight')
+export const OverlayStyle = cva(
+  'absolute bottom-0 px-4 w-full font-extralight -translate-x-4 lg:translate-x-0'
+)
 
 export const SubheadingStyle = cva('text-primary text-lg')
 

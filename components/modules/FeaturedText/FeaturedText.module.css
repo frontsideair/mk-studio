@@ -15,7 +15,7 @@
   @apply object-cover object-center w-full h-full;
 }
 .heading {
-  @apply translate-y-20 -translate-x-32 transform py-2 leading-tight;
+  @apply translate-y-20 -translate-x-16 lg:-translate-x-32 transform py-2 leading-tight;
 }
 .title {
   --heading-secondary-border-width: 2px;

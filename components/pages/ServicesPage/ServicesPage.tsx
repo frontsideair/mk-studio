@@ -130,14 +130,15 @@ const ServicesPage: FC<ServicesPageProps> = () => {
 
 function MachDiagram() {
   const article = 'border-2 border-white p-4'
-  const figure = 'flex flex-col items-center justify-center aspect-[4/3] p-2'
+  const figure =
+    'flex flex-col items-center justify-center aspect-[4/3] p-2 gap-2'
   const figcaption = 'text-sm'
 
   return (
     <div className="grid lg:grid-cols-3 text-center gap-8">
       <article className={cn(article, 'lg:col-span-3')}>
         <h3>Digital experiences</h3>
-        <div className="grid lg:grid-cols-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4">
           <figure className={figure}>
             <Store />
             <figcaption className={figcaption}>In-store</figcaption>
