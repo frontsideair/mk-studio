@@ -2,10 +2,6 @@
   @apply relative;
 }
 
-.animatedBg {
-  @apply relative min-h-[240px] w-full opacity-50;
-}
-
 .featuredRow {
   @apply grid grid-cols-1 lg:grid-cols-3 gap-24 py-14;
 }

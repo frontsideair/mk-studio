@@ -1,6 +1,5 @@
 'use client'
 
-import AnimatedBackgroundGrid from '@components/common/AnimatedBackgroundGrid'
 import BackgroundGrid from '@components/common/BackgroundGrid'
 import { BackgroundGridProps } from '@components/common/BackgroundGrid/BackgroundGrid'
 import LearnMore from '@components/ui/LearnMore'

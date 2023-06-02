@@ -1,4 +1,4 @@
-import BackgroundGrid from '@components/common/BackgroundGrid'
+import BackgroundGridContainer from '@components/common/BackgroundGridContainer/BackgroundGridContainer'
 import Card from '@components/common/Card'
 import API from '@components/icons/API/Api'
 import CMS from '@components/icons/CMS/Cms'
@@ -32,9 +32,12 @@ const ServicesPage: FC<ServicesPageProps> = () => {
         firstLine="Let's make your"
         secondLine="creative vision a reality"
       />
-      <div className={s.animatedBg}>
-        <BackgroundGrid bgColor="black" direction="down" initialHeight={240} />
-      </div>
+
+      <BackgroundGridContainer
+        bgColor="black"
+        direction="down"
+        initialHeight={240}
+      />
 
       <main id="main">
         <section>
