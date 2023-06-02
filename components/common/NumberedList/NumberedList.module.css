@@ -4,5 +4,5 @@
 
 .custom-numbering-item::before {
   counter-increment: count 1;
-  content: '0' counter(count) !important;
+  content: counter(count, decimal-leading-zero) !important;
 }
