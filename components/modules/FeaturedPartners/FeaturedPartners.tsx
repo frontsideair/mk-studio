@@ -3,7 +3,7 @@
 import BackgroundGrid from '@components/common/BackgroundGrid'
 import LearnMore from '@components/ui/LearnMore/LearnMore'
 import { VariantProps } from 'class-variance-authority'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { FC } from 'react'
 
 import {
@@ -17,7 +17,7 @@ export interface FeaturedPartnersProps
   content: {
     id: string
     image: {
-      src: string
+      src: StaticImageData
       alt: string
     }
     href: string
@@ -32,13 +32,7 @@ const FeaturedPartners: FC<FeaturedPartnersProps> = ({ content }) => {
         {content.map(({ id, image, href, description }) => (
           <li key={id} className={ListItemStyle()}>
             <figure>
-              <Image
-                loading="lazy"
-                src={image.src}
-                alt={image.alt}
-                width={480}
-                height={120}
-              />
+              <Image src={image.src} alt={image.alt} height={120} />
             </figure>
             <p>{description}</p>
             <LearnMore link={href} className="max-w-fit">
