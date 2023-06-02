@@ -1,0 +1,8 @@
+.custom-numbering-root {
+  counter-reset: count;
+}
+
+.custom-numbering-item::before {
+  counter-increment: count 1;
+  content: '0' counter(count) !important;
+}
