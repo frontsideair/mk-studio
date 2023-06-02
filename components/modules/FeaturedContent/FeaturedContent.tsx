@@ -4,7 +4,7 @@ import BackgroundGrid from '@components/common/BackgroundGrid'
 import { BackgroundGridProps } from '@components/common/BackgroundGrid/BackgroundGrid'
 import LearnMore from '@components/ui/LearnMore'
 import cn from 'classnames'
-import { FC, ReactNode, useEffect, useRef, useState } from 'react'
+import { FC, ReactNode } from 'react'
 
 import s from './FeaturedContent.module.css'
 
@@ -27,27 +27,6 @@ const FeaturedContent: FC<FeaturedContentProps> = ({
   extraContent,
   direction,
 }) => {
-  const [elementHeight, setElementHeight] = useState(458)
-  const [elementWidth, setElementWidth] = useState(1367)
-  const ref = useRef<HTMLDivElement>(null)
-  const numberOfItems = content?.length || 0
-  console.log('ref height', ref.current?.clientHeight)
-
-  useEffect(() => {
-    const handleResize = () => {
-      setElementWidth(innerWidth || ref.current?.clientWidth || elementWidth)
-      setElementHeight(ref.current?.clientHeight || elementHeight)
-    }
-    window.addEventListener('resize', handleResize)
-    setElementHeight(ref.current?.clientHeight ?? 394)
-    setElementWidth(ref.current?.clientWidth ?? innerWidth)
-  }, [
-    elementHeight,
-    elementWidth,
-    ref.current?.clientHeight,
-    ref.current?.clientWidth,
-  ])
-
   return (
     <>
       <div className={s.root}>
