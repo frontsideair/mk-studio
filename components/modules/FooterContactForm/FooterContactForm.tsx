@@ -23,7 +23,15 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
     // NOTE: if not flushed updates get batched, and the form never gets disabled
     flushSync(() => setPending(true))
 
-    await sendEmail(data)
+    const formValues = Object.fromEntries(data.entries())
+
+    await sendEmail({
+      to: process.env.NEXT_PUBLIC_SENDGRID_FROM_EMAIL as string,
+      from: 'no-reply@monkeykodeagency.com',
+      subject: `Inquiry from ${formValues.name}`,
+      text: `Name: ${formValues.name}, Company: ${formValues.company}, Interest: ${formValues.interest}, Email: ${formValues.email}`,
+      html: `<p>Name: ${formValues.name}</p><p>Company: ${formValues.company}</p><p>Interest: ${formValues.interest}</p><p>Email: ${formValues.email}</p>`,
+    })
 
     setPending(false)
     setSent(true)

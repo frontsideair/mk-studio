@@ -1,29 +1,38 @@
 'use server'
-import nodemailer from 'nodemailer'
+import sgMail from '@sendgrid/mail'
 
-export async function sendEmail(data: FormData) {
-  const testAccount = await nodemailer.createTestAccount()
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
-    },
-  })
+interface EmailParams {
+  to: string
+  from: string
+  subject: string
+  text: string
+  html?: string
+}
 
-  const info = await transporter.sendMail({
-    from: 'dev@monkeykodeagency.com',
-    to: 'dev@monkeykodeagency.com',
-    subject: "New message from Monkeykode's website",
-    text: `Name: ${data.get('name')}
-Company: ${data.get('company')}
-Interest: ${data.get('interest')}
-Email: ${data.get('email')} `,
-  })
+export async function sendEmail({
+  to,
+  from,
+  subject,
+  text,
+  html,
+}: EmailParams) {
+  const msg = {
+    to,
+    from,
+    subject,
+    text,
+    html,
+  }
 
-  console.log('Message sent: %s', info.messageId)
-  console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info))
+  try {
+    await sgMail.send(msg)
+    console.log(`Email sent to ${to}`)
+  } catch (error) {
+    console.error(`Error sending email to ${to}`, error)
+    if (error.response) {
+      console.error(error.response.body)
+    }
+  }
 }

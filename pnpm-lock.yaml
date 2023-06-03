@@ -12,6 +12,7 @@ specifiers:
   '@sanity/ui': ^1.3.2
   '@sanity/vision': ^3.9.0
   '@sanity/webhook': ^2.0.0
+  '@sendgrid/mail': ^7.7.0
   '@tailwindcss/forms': ^0.5.3
   '@types/react': ^18.2.7
   '@types/react-dom': ^18.2.4
@@ -25,6 +26,7 @@ specifiers:
   eslint-plugin-simple-import-sort: ^10.0.0
   graphql: ^16.6.0
   lodash: ^4.17.21
+  mail: link:@@sendgrid/mail
   next: ^13.4.4
   next-sanity: ^4.1.7
   nodemailer: ^6.9.2
@@ -38,6 +40,7 @@ specifiers:
   react-is: ^18.2.0
   sanity: ^3.9.0
   sanity-plugin-asset-source-unsplash: ^1.0.6
+  sendgrid: link:@@types/sendgrid
   styled-components: ^5.3.9
   tailwind-merge: ^1.12.0
   tailwindcss: ^3.3.1
@@ -55,12 +58,14 @@ dependencies:
   '@sanity/ui': 1.3.2_naxdq4ftv6hnbklxoymdh4kece
   '@sanity/vision': 3.9.0_naxdq4ftv6hnbklxoymdh4kece
   '@sanity/webhook': 2.0.0
+  '@sendgrid/mail': 7.7.0
   class-variance-authority: 0.6.0_typescript@5.0.4
   classnames: 2.3.2
   date-fns: 2.29.3
   deepmerge: 4.3.1
   graphql: 16.6.0
   lodash: 4.17.21
+  mail: link:@@sendgrid/mail
   next: 13.4.4_biqbaboplfbrettd7655fr4n2y
   next-sanity: 4.1.7_wkr6gqqzfoicy6ay7wqdxxvoti
   nodemailer: 6.9.2
@@ -69,6 +74,7 @@ dependencies:
   react-is: 18.2.0
   sanity: 3.9.0_6dbsnkovqkwwqsyztc3k7ozpge
   sanity-plugin-asset-source-unsplash: 1.0.6_nidz73lnlxrt4es3gsp6ggg77a
+  sendgrid: link:@@types/sendgrid
   styled-components: 5.3.9_7i5myeigehqah43i5u7wbekgba
   tailwind-merge: 1.12.0
 
@@ -1709,6 +1715,33 @@ packages:
       tslib: 2.5.0
     dev: false
 
+  /@sendgrid/client/7.7.0:
+    resolution: {integrity: sha512-SxH+y8jeAQSnDavrTD0uGDXYIIkFylCo+eDofVmZLQ0f862nnqbC3Vd1ej6b7Le7lboyzQF6F7Fodv02rYspuA==}
+    engines: {node: 6.* || 8.* || >=10.*}
+    dependencies:
+      '@sendgrid/helpers': 7.7.0
+      axios: 0.26.1
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@sendgrid/helpers/7.7.0:
+    resolution: {integrity: sha512-3AsAxfN3GDBcXoZ/y1mzAAbKzTtUZ5+ZrHOmWQ279AuaFXUNCh9bPnRpN504bgveTqoW+11IzPg3I0WVgDINpw==}
+    engines: {node: '>= 6.0.0'}
+    dependencies:
+      deepmerge: 4.3.1
+    dev: false
+
+  /@sendgrid/mail/7.7.0:
+    resolution: {integrity: sha512-5+nApPE9wINBvHSUxwOxkkQqM/IAAaBYoP9hw7WwgDNQPxraruVqHizeTitVtKGiqWCKm2mnjh4XGN3fvFLqaw==}
+    engines: {node: 6.* || 8.* || >=10.*}
+    dependencies:
+      '@sendgrid/client': 7.7.0
+      '@sendgrid/helpers': 7.7.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /@swc/helpers/0.5.1:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
@@ -2229,6 +2262,14 @@ packages:
     resolution: {integrity: sha512-/BQzOX780JhsxDnPpH4ZiyrJAzcd8AfzFPkv+89veFSr1rcMjuq2JDCwypKaPeB6ljHp9KjXhPpjgCvQlWYuqg==}
     engines: {node: '>=4'}
     dev: true
+
+  /axios/0.26.1:
+    resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
+    dependencies:
+      follow-redirects: 1.15.2_debug@4.3.4
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /axobject-query/3.1.1:
     resolution: {integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==}
