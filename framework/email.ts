@@ -28,7 +28,7 @@ export async function sendEmail({
 
   try {
     await sgMail.send(msg)
-    console.log(`Email sent to ${to}`)
+    console.log(`Email sent to ${to} from Footer Form`)
   } catch (error) {
     console.error(`Error sending email to ${to}`, error)
     if (error.response) {
