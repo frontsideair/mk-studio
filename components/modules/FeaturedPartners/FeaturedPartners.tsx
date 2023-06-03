@@ -1,0 +1,49 @@
+// templates/component/FeaturedPartners.js
+
+import BackgroundGrid from '@components/common/BackgroundGrid'
+import LearnMore from '@components/ui/LearnMore/LearnMore'
+import { VariantProps } from 'class-variance-authority'
+import Image, { StaticImageData } from 'next/image'
+import { FC } from 'react'
+
+import {
+  ContentStyle,
+  FeaturedPartnersStyle,
+  ListItemStyle,
+} from './FeaturedPartnersStyle'
+
+export interface FeaturedPartnersProps
+  extends VariantProps<typeof FeaturedPartnersStyle> {
+  content: {
+    id: string
+    image: {
+      src: StaticImageData
+      alt: string
+    }
+    href: string
+    description: string
+  }[]
+}
+
+const FeaturedPartners: FC<FeaturedPartnersProps> = ({ content }) => {
+  return (
+    <div className={FeaturedPartnersStyle()}>
+      <ul className={ContentStyle()}>
+        {content.map(({ id, image, href, description }) => (
+          <li key={id} className={ListItemStyle()}>
+            <figure>
+              <Image src={image.src} alt={image.alt} height={120} />
+            </figure>
+            <p>{description}</p>
+            <LearnMore link={href} className="max-w-fit">
+              Hire us
+            </LearnMore>
+          </li>
+        ))}
+      </ul>
+      <BackgroundGrid bgColor="rgb(43, 34, 114)" direction="up" />
+    </div>
+  )
+}
+
+export default FeaturedPartners

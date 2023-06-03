@@ -1,11 +1,10 @@
-import BackgroundGrid from '@components/common/BackgroundGrid'
+import BackgroundGridContainer from '@components/common/BackgroundGridContainer/BackgroundGridContainer'
 import Card from '@components/common/Card'
-import FooterContactForm from '@components/FooterContactForm/FooterContactForm'
-import API from '@components/icons/API/API'
-import CMS from '@components/icons/CMS/CMS'
+import API from '@components/icons/API/Api'
+import CMS from '@components/icons/CMS/Cms'
 import Desktop from '@components/icons/Desktop'
 import Email from '@components/icons/Email/Email'
-import LCD from '@components/icons/LCD/LCD'
+import LCD from '@components/icons/LCD/Lcd'
 import Management from '@components/icons/Management/Management'
 import OnlineShopping from '@components/icons/OnlineShopping/OnlineShopping'
 import Optimization from '@components/icons/Optimization/Optimization'
@@ -16,6 +15,7 @@ import Store from '@components/icons/Store/Store'
 import WebPage from '@components/icons/WebPage/WebPage'
 import World from '@components/icons/World'
 import FeaturedContent from '@components/modules/FeaturedContent'
+import FooterContactForm from '@components/modules/FooterContactForm/FooterContactForm'
 import Container from '@components/ui/Container'
 import Hero from '@components/ui/Hero'
 import cn from 'classnames'
@@ -32,9 +32,12 @@ const ServicesPage: FC<ServicesPageProps> = () => {
         firstLine="Let's make your"
         secondLine="creative vision a reality"
       />
-      <div className={s.animatedBg}>
-        <BackgroundGrid bgColor="black" direction="down" initialHeight={240} />
-      </div>
+
+      <BackgroundGridContainer
+        bgColor="black"
+        direction="down"
+        initialHeight={240}
+      />
 
       <main id="main">
         <section>
@@ -127,14 +130,15 @@ const ServicesPage: FC<ServicesPageProps> = () => {
 
 function MachDiagram() {
   const article = 'border-2 border-white p-4'
-  const figure = 'flex flex-col items-center justify-center aspect-[4/3] p-2'
+  const figure =
+    'flex flex-col items-center justify-center aspect-[4/3] p-2 gap-2'
   const figcaption = 'text-sm'
 
   return (
     <div className="grid lg:grid-cols-3 text-center gap-8">
       <article className={cn(article, 'lg:col-span-3')}>
         <h3>Digital experiences</h3>
-        <div className="grid lg:grid-cols-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4">
           <figure className={figure}>
             <Store />
             <figcaption className={figcaption}>In-store</figcaption>

@@ -29,6 +29,8 @@ const BackgroundGrid: FC<BackgroundGridProps> = ({
     window.addEventListener('resize', handleResize)
     setElementHeight(ref.current?.clientHeight ?? 394)
     setElementWidth(ref.current?.clientWidth ?? innerWidth)
+
+    return () => window.removeEventListener('resize', handleResize)
   }, [
     elementHeight,
     elementWidth,

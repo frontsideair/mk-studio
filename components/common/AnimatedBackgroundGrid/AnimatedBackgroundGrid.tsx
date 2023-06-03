@@ -198,31 +198,49 @@ const AnimatedBackgroundGrid: FC<AnimatedBackgroundGridProps> = ({
   const [height, setHeight] = useState(bgHeight)
   const ref = useRef<HTMLCanvasElement>(null)
   const speed = 200
-  let tick: NodeJS.Timer | null = null
-  const handleResize = () => {
-    setWidth(innerWidth || ref.current?.clientWidth || width)
-    setHeight(ref.current?.clientHeight || height)
-  }
+
+  const [mouseOver, setMouseOver] = useState(false)
 
   const handleMosueEnter = () => {
     // starAnimation({ ref, width, height });
     // tick();
     console.log('enter')
-
-    tick = setInterval(() => {
-      drawBoard({ ref, width, height, bgColor })
-    }, speed)
+    setMouseOver(true)
   }
+
   const handleMouseOut = () => {
     // stopAnimation({ ref, width, height });
     console.log('out')
-
-    clearInterval(tick as NodeJS.Timer)
+    setMouseOver(false)
   }
+
+  const tick = useRef(null)
+  useEffect(() => {
+    function cleanup() {
+      clearInterval(tick.current)
+    }
+
+    if (mouseOver) {
+      tick.current = setInterval(() => {
+        drawBoard({ ref, width, height, bgColor })
+      }, speed)
+    } else {
+      cleanup()
+    }
+
+    return cleanup
+  }, [bgColor, height, mouseOver, width])
+
   //   const numberOfSquares = (width / 17) * (height / 17);
   useEffect(() => {
+    const handleResize = () => {
+      setWidth(innerWidth || ref.current?.clientWidth || width)
+      setHeight(ref.current?.clientHeight || height)
+    }
+
     drawBoard({ ref, width, height, bgColor })
     window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [width, height, bgColor])
 
   return (

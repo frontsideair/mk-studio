@@ -60,9 +60,9 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
           <option value="" disabled>
             interest
           </option>
-          <option value="new business">new business</option>
-          <option value="partnership">partnership</option>
-          <option value="careers">careers</option>
+          <option value="development">development</option>
+          <option value="maintenance">maintenance</option>
+          <option value="consulting">consulting</option>
         </select>
         <div className="text-right">
           <input
