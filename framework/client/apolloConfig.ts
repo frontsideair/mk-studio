@@ -1,7 +1,6 @@
-import { InMemoryCache } from '@apollo/client';
-import { relayStylePagination } from '@apollo/client/utilities';
+import { InMemoryCache } from '@apollo/client'
 
-import link from './link';
+import link from './link'
 
 const apolloConfig = (initialState: any) => {
   return {
@@ -17,7 +16,7 @@ const apolloConfig = (initialState: any) => {
       //     },
       //   },
     }).restore(initialState || {}),
-  };
-};
+  }
+}
 
-export default apolloConfig;
+export default apolloConfig
