@@ -2,7 +2,7 @@
 
 import { FC } from 'react'
 
-import s from './Api.module.css'
+import s from './API.module.css'
 
 export interface ApiProps {}
 

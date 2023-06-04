@@ -17,7 +17,9 @@ export default function Alert({ preview }) {
             <>
               This page is a preview.{' '}
               <Link
-                href="/api/exit-preview"
+                href={{
+                  pathname: '/api/exit-preview',
+                }}
                 className="underline transition-colors duration-200 hover:text-cyan"
               >
                 Click here

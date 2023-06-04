@@ -1,1 +1,1 @@
-export { default } from './Lcd';
+export { default } from './LCD';

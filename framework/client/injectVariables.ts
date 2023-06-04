@@ -1,10 +1,10 @@
-import { initializeApollo } from 'client';
 // import HOME_POPULAR_CATEGORIES from 'framework/api/queries/homePopularCategories';
-import queryRequiresVariable from './queryRequiresVariables';
+import { initializeApollo } from '.'
+import queryRequiresVariable from './queryRequiresVariables'
 
 const injectVariables = async (operation) => {
-  const client = initializeApollo();
-  const variableName = 'popularCategories';
+  const client = initializeApollo()
+  const variableName = 'popularCategories'
   if (
     queryRequiresVariable({
       variableName,
@@ -26,6 +26,6 @@ const injectVariables = async (operation) => {
     // merge data
     // operation.variables[variableName] = popularCategories;
   }
-};
+}
 
-export default injectVariables;
+export default injectVariables

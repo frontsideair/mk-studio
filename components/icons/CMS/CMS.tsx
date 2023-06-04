@@ -2,7 +2,7 @@
 
 import { FC } from 'react'
 
-import s from './Cms.module.css'
+import s from './CMS.module.css'
 
 export interface CmsProps {}
 

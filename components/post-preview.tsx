@@ -24,7 +24,12 @@ export default function PostPreview({
         />
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+        <Link
+          href={{
+            pathname: `/posts/${slug}`,
+          }}
+          className="hover:underline"
+        >
           {title}
         </Link>
       </h3>

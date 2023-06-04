@@ -2,7 +2,7 @@
 
 import { FC } from 'react'
 
-import s from './Lcd.module.css'
+import s from './LCD.module.css'
 
 export interface LcdProps {}
 

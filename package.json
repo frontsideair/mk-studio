@@ -20,6 +20,7 @@
     "@apollo/client": "^3.7.12",
     "@headlessui/react": "^1.7.7",
     "@heroicons/react": "^2.0.17",
+    "@next/env": "^13.4.4",
     "@portabletext/react": "^2.0.3",
     "@sanity/cli": "^3.11.5",
     "@sanity/icons": "^2.3.1",
@@ -34,6 +35,7 @@
     "date-fns": "^2.29.3",
     "deepmerge": "^4.3.1",
     "graphql": "^16.6.0",
+    "groq": "^3.11.5",
     "lodash": "^4.17.21",
     "mail": "link:@@sendgrid/mail",
     "next": "^13.4.4",
@@ -51,6 +53,7 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
+    "@types/next": "^9.0.0",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
     "autoprefixer": "^10.4.14",

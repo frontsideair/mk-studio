@@ -2,7 +2,7 @@
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
 import { visionTool } from '@sanity/vision'
-import { createConfig, Slug } from 'sanity'
+import { defineConfig, Slug } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
@@ -26,7 +26,7 @@ import settingsType from './schemas/settings'
 // @TODO: update next-sanity/studio to automatically set this when needed
 const basePath = '/studio'
 
-export default createConfig({
+export default defineConfig({
   basePath,
   projectId: 'sgrnoblg',
   dataset: 'production',

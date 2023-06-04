@@ -1,4 +1,4 @@
-import { onError } from '@apollo/client/link/error';
+import { onError } from '@apollo/client/link/error'
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
@@ -10,12 +10,12 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
           4
         )}, Path: ${path}`
       )
-    );
+    )
 
   if (networkError) {
-    console.error(`[Network error]: ${networkError}`);
-    console.error(`results: ${JSON.stringify(networkError.result, null, 4)}`);
+    console.error(`[Network error]: ${networkError}`)
+    console.error(`results: ${JSON.stringify(networkError.message, null, 4)}`)
   }
-});
+})
 
-export default errorLink;
+export default errorLink
