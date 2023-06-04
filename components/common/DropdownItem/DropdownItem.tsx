@@ -2,12 +2,12 @@ import { Menu, Transition } from '@headlessui/react'
 import cn from 'classnames'
 import Link from 'next/link'
 import { FC, Fragment } from 'react'
-import { IndexQuery_menu_items } from 'types/IndexQuery'
 
 import s from './DropdownItem.module.css'
+import { Menu as MenuType } from '../../../types/graphql'
 
 interface DropDownItemProps {
-  item: IndexQuery_menu_items
+  item: MenuType['items'][number]
 }
 const DropdownItem: FC<DropDownItemProps> = ({ item }) => {
   return item?.links?.length ? (

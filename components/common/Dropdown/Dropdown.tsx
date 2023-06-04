@@ -4,7 +4,7 @@ import DropdownItem from '../DropdownItem'
 
 import { Menu } from '../../../types/graphql'
 interface DropDownProps {
-  items: Menu[]
+  items: Menu['items']
 }
 
 const DropDown: FC<DropDownProps> = ({ items }) => {

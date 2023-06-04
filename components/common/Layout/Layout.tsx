@@ -1,19 +1,18 @@
-import Footer from '../Footer';
-import Header from '../Header';
-import { FC, ReactNode } from 'react';
-import { IndexQuery_menu } from 'types/IndexQuery';
+import Footer from '../Footer'
+import Header from '../Header'
+import { FC, ReactNode } from 'react'
 interface LayoutProps {
-  children: ReactNode;
-  menu: IndexQuery_menu[];
-  preview?: boolean;
+  children: ReactNode
+  preview?: boolean
 }
-const Layout: FC<LayoutProps> = ({ children, menu, preview }) => {
+const Layout: FC<LayoutProps> = ({ children, preview }) => {
   return (
     <>
-      <Header menu={menu} />
+      {/* @ts-expect-error Async Server Component: https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#async-and-await-in-server-components */}
+      <Header />
       <main>{children}</main>
       <Footer />
     </>
-  );
-};
-export default Layout;
+  )
+}
+export default Layout

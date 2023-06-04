@@ -1,5 +1,3 @@
-// import { IndexQuery_menu } from 'types/IndexQuery';
-
 import { initializeApollo } from '@framework/client'
 import MENU_QUERY from '@framework/data/queries/MENU_QUERY'
 

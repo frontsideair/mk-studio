@@ -1,11 +1,7 @@
 'use client'
-import { gql } from '@apollo/client'
 import Logo from '@components/ui/Logo'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { initializeApollo } from 'framework/client'
-import MENU_QUERY from '@framework/data/queries/MENU_QUERY'
-import { FC } from 'react'
 
 import DropDown from '../Dropdown/Dropdown'
 import s from './Nav.module.css'
