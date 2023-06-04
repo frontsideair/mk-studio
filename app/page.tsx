@@ -52,7 +52,7 @@ const Page: NextPage = () => {
           </Container>
         </section>
         <section>
-          {/* @ts-expect-error Async Server Component */}
+          {/* @ts-expect-error Async Server Component: https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#async-and-await-in-server-components */}
           <FeaturedClients />
         </section>
         <section>
