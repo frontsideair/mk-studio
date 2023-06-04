@@ -16,6 +16,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
+        {/* @ts-expect-error Async Server Component https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#async-and-await-in-server-components */}
         <Header />
         {children}
         <Footer />
