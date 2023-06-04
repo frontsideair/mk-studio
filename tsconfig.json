@@ -22,7 +22,8 @@
       "@app/*": ["app/*"],
       "@pages/*": ["pages/*"],
       "@framework/*": ["framework/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@types/*": ["types/*"]
     },
     "plugins": [
       {

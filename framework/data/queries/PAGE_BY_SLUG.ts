@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from '@apollo/client'
 
 const PAGES_BY_SLUG_QUERY = gql`
   query PagesBySlug($slug: String!) {
@@ -7,9 +7,6 @@ const PAGES_BY_SLUG_QUERY = gql`
       slug {
         current
         source
-      }
-      modules {
-        __typename
       }
     }
     menu: allMenu(where: { title: { eq: "Primary Menu" } }) {
@@ -35,6 +32,6 @@ const PAGES_BY_SLUG_QUERY = gql`
       }
     }
   }
-`;
+`
 
-export default PAGES_BY_SLUG_QUERY;
+export default PAGES_BY_SLUG_QUERY

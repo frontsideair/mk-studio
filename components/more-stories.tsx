@@ -1,4 +1,4 @@
-import { PostProps } from '../types'
+import { PostProps } from '../types/props'
 import PostPreview from './post-preview'
 
 export default function MoreStories({ posts }: { posts: PostProps[] }) {

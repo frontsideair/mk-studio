@@ -1,7 +1,6 @@
 import Image from 'next/image'
-
 import { urlForImage } from '../lib/sanity'
-import { AuthorProps } from '../types'
+import { AuthorProps } from '../types/props'
 
 export default function Avatar(props: AuthorProps) {
   const { name, picture } = props

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { PostProps } from '../types'
+import { PostProps } from '../types/props'
 import Avatar from './avatar'
 import CoverImage from './cover-image'
 import Date from './date'
