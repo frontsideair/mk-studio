@@ -1,26 +1,26 @@
-import { FC } from 'react';
-import { IndexQuery_menu_items } from 'types/IndexQuery';
+import { FC } from 'react'
 
-import DropdownItem from '../DropdownItem';
+import DropdownItem from '../DropdownItem'
 
+import { Menu } from '../../../types/graphql'
 interface DropDownProps {
-  items: (IndexQuery_menu_items | null)[] | null;
+  items: Menu[]
 }
 
 const DropDown: FC<DropDownProps> = ({ items }) => {
   if (items?.length === 0 || !items) {
-    return null;
+    return null
   }
   if (items.every((item) => !item)) {
-    return null;
+    return null
   }
   return (
     <>
       {items.map((item) =>
-        item ? <DropdownItem key={item.title} item={item} /> : null
+        item?.title ? <DropdownItem key={item.title} item={item} /> : null
       )}
     </>
-  );
-};
+  )
+}
 
-export default DropDown;
+export default DropDown
