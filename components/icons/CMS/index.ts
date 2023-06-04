@@ -1,1 +1,1 @@
-export { default } from './Cms';
+export { default } from './CMS'

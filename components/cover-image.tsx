@@ -36,7 +36,12 @@ export default function CoverImage(props: CoverImageProps) {
   return (
     <div className="sm:mx-0">
       {slug && typeof slug === 'string' ? (
-        <Link href={`/posts/${slug}`} aria-label={title}>
+        <Link
+          href={{
+            pathname: `/posts/${slug}`,
+          }}
+          aria-label={title}
+        >
           {image}
         </Link>
       ) : (
