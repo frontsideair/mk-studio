@@ -15,7 +15,7 @@ const Logo: FC<LogoProps> = () => {
         viewBox="0 0 88 90"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"
-        className="text-tertiary"
+        className="text-primary"
       >
         <path
           fillRule="evenodd"
