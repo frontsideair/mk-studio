@@ -2,7 +2,8 @@
 'use client'
 
 import Arrow from '@components/ui/Arrow/Arrow'
-import { sendEmail } from '@framework/email'
+import { sendInquiry } from '@framework/email'
+import { Turnstile, TurnstileInstance } from '@marsidev/react-turnstile'
 import { FC, useRef, useState } from 'react'
 import { flushSync } from 'react-dom'
 
@@ -19,34 +20,26 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
   const [pending, setPending] = useState(false)
   const [result, setResult] = useState(null)
   const formRef = useRef<HTMLFormElement>(null)
+  const turnstileRef = useRef<TurnstileInstance>()
 
   async function handleSubmit(data: FormData) {
     // NOTE: if not flushed updates get batched, and the form never gets disabled
     flushSync(() => setPending(true))
 
-    const formValues = Object.fromEntries(data.entries())
+    const result = await sendInquiry({
+      name: data.get('name') as string,
+      company: data.get('company') as string,
+      interest: data.get('interest') as string,
+      email: data.get('email') as string,
+      cfTurnstileResponse: data.get('cf-turnstile-response') as string,
+    })
 
-    const [result] = await Promise.all([
-      sendEmail({
-        to: process.env.NEXT_PUBLIC_SENDGRID_FROM_EMAIL as string,
-        from: 'no-reply@monkeykodeagency.com',
-        subject: `Inquiry from ${formValues.name}`,
-        text: `Name: ${formValues.name}, Company: ${formValues.company}, Interest: ${formValues.interest}, Email: ${formValues.email}`,
-        html: `<p>Name: ${formValues.name}</p><p>Company: ${formValues.company}</p><p>Interest: ${formValues.interest}</p><p>Email: ${formValues.email}</p>`,
-      }),
-      sendEmail({
-        to: formValues.email as string,
-        from: 'no-reply@monkeykodeagency.com',
-        subject: `We received your inquiry`,
-        text: `We received your inquiry and we will be in touch soon!`,
-        html: `<p>We received your inquiry and we will be in touch soon!</p>`,
-      }),
-    ])
     setResult(result)
     setPending(false)
 
     if (result === 'success') {
       formRef.current.reset()
+      turnstileRef.current.reset()
     }
   }
 
@@ -110,6 +103,12 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
             !pending &&
             'The form could not be sent successfully. Please try again later.'}
         </div>
+        <Turnstile
+          ref={turnstileRef}
+          siteKey={process.env.NEXT_PUBLIC_CF_TURNSTILE_SITE_KEY}
+          options={{ size: 'invisible' }}
+          onSuccess={() => console.log('Turnstile success')}
+        />
       </fieldset>
     </form>
   )
