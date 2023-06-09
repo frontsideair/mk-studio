@@ -54,9 +54,16 @@ export async function sendInquiry({
   email,
   cfTurnstileResponse,
 }: InquiryParams) {
+  let isHuman = false
   try {
-    const isHuman = await captcha.verify(cfTurnstileResponse)
-    if (isHuman) {
+    isHuman = await captcha.verify(cfTurnstileResponse)
+  } catch (error) {
+    console.error('captcha check failed', error.message)
+    return 'error'
+  }
+
+  if (isHuman) {
+    try {
       await Promise.all([
         sendEmail({
           to: process.env.NEXT_PUBLIC_SENDGRID_FROM_EMAIL as string,
@@ -73,11 +80,14 @@ export async function sendInquiry({
           html: `<p>We received your inquiry and we will be in touch soon!</p>`,
         }),
       ])
+
       return 'success'
-    } else {
+    } catch {
+      console.error('emails could not be sent')
       return 'error'
     }
-  } catch {
+  } else {
+    console.error('captcha is not valid')
     return 'error'
   }
 }
