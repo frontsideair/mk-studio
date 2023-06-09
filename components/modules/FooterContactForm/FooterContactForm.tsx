@@ -95,13 +95,17 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
             />
           </button>
         </div>
-        <div className="text-center lg:col-span-5">
-          {result === 'success' &&
-            !pending &&
-            "Your inquiry has been sent. We'll be in touch soon!"}
-          {result === 'error' &&
-            !pending &&
-            'The form could not be sent successfully. Please try again later.'}
+        <div className="text-center lg:col-span-5 -translate-y-24">
+          <div>
+            {result === 'success' &&
+              !pending &&
+              "Your inquiry has been sent. We'll be in touch soon!"}
+          </div>
+          <div className="text-red-400">
+            {result === 'error' &&
+              !pending &&
+              'The form could not be sent successfully. Please try again later.'}
+          </div>
         </div>
         <Turnstile
           ref={turnstileRef}
