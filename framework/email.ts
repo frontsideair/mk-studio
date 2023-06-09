@@ -34,5 +34,7 @@ export async function sendEmail({
     if (error.response) {
       console.error(error.response.body)
     }
+    return 'error'
   }
+  return 'success'
 }

@@ -17,7 +17,7 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
 }) => {
   // NOTE: tried to experimental `useFormStatus` first, but it doesn't work currently
   const [pending, setPending] = useState(false)
-  const [sent, setSent] = useState(false)
+  const [result, setResult] = useState(null)
 
   async function handleSubmit(data: FormData) {
     // NOTE: if not flushed updates get batched, and the form never gets disabled
@@ -25,16 +25,15 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
 
     const formValues = Object.fromEntries(data.entries())
 
-    await sendEmail({
+    const result = await sendEmail({
       to: process.env.NEXT_PUBLIC_SENDGRID_FROM_EMAIL as string,
       from: 'no-reply@monkeykodeagency.com',
       subject: `Inquiry from ${formValues.name}`,
       text: `Name: ${formValues.name}, Company: ${formValues.company}, Interest: ${formValues.interest}, Email: ${formValues.email}`,
       html: `<p>Name: ${formValues.name}</p><p>Company: ${formValues.company}</p><p>Interest: ${formValues.interest}</p><p>Email: ${formValues.email}</p>`,
     })
-
+    setResult(result)
     setPending(false)
-    setSent(true)
   }
 
   return (
@@ -90,9 +89,12 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
           </button>
         </div>
         <div className="text-center lg:col-span-5">
-          {sent &&
+          {result === 'success' &&
             !pending &&
             "Your inquiry has been sent. We'll be in touch soon!"}
+          {result === 'error' &&
+            !pending &&
+            'The form could not be sent successfully. Please try again later.'}
         </div>
       </fieldset>
     </form>
