@@ -3,7 +3,7 @@
 
 import Arrow from '@components/ui/Arrow/Arrow'
 import { sendEmail } from '@framework/email'
-import { FC, useState } from 'react'
+import { FC, useRef, useState } from 'react'
 import { flushSync } from 'react-dom'
 
 import s from './FooterContactForm.module.css'
@@ -18,6 +18,7 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
   // NOTE: tried to experimental `useFormStatus` first, but it doesn't work currently
   const [pending, setPending] = useState(false)
   const [result, setResult] = useState(null)
+  const formRef = useRef<HTMLFormElement>(null)
 
   async function handleSubmit(data: FormData) {
     // NOTE: if not flushed updates get batched, and the form never gets disabled
@@ -34,10 +35,14 @@ const FooterContactForm: FC<FooterContactFormProps> = ({
     })
     setResult(result)
     setPending(false)
+
+    if (result === 'success') {
+      formRef.current.reset()
+    }
   }
 
   return (
-    <form action={handleSubmit}>
+    <form action={handleSubmit} ref={formRef}>
       <fieldset className={s.root} disabled={pending}>
         <h2 className={s.heading}>{tagline}</h2>
         <input
